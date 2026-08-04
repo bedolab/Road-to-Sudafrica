@@ -1,0 +1,1170 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sudafrica & eSwatini · Kruger Discovery 2026</title>
+
+<style>
+  :root{
+    --ground:#EDEEE9;
+    --surface:#FFFFFF;
+    --surface-2:#F5F6F1;
+    --line:#D9DBD3;
+    --line-soft:#E6E8E1;
+    --ink:#1A1D1A;
+    --ink-2:#3D423C;
+    --muted:#6B7268;
+    --accent:#2E6B4F;
+    --accent-soft:#E2ECE6;
+    --hot:#B4611C;
+    --hot-soft:#F6E9DE;
+    --ok:#2E6B4F;
+    --warn:#8A6A16;
+    --warn-soft:#F4EEDC;
+    --stop:#9E3B2E;
+    --stop-soft:#F7E5E1;
+    --on-accent:#FFFFFF;
+    --shadow:0 1px 2px rgba(26,29,26,.05), 0 8px 24px -16px rgba(26,29,26,.28);
+
+    --serif:Georgia,"Iowan Old Style","Palatino Linotype",Palatino,serif;
+    --sans:system-ui,-apple-system,"Segoe UI Variable Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,"Cascadia Mono",Consolas,"SF Mono",Menlo,monospace;
+
+    --wrap:1120px;
+    --r:10px;
+  }
+
+  @media (prefers-color-scheme: dark){
+    :root{
+      --ground:#161A17;
+      --surface:#1E2320;
+      --surface-2:#232925;
+      --line:#333B35;
+      --line-soft:#2A312C;
+      --ink:#E4E7E1;
+      --ink-2:#BFC5BC;
+      --muted:#8E968B;
+      --accent:#6FBF97;
+      --accent-soft:#1F3329;
+      --hot:#E0904A;
+      --hot-soft:#33251A;
+      --ok:#6FBF97;
+      --warn:#D6B45C;
+      --warn-soft:#2E2917;
+      --stop:#E0857A;
+      --stop-soft:#33201D;
+      --on-accent:#12211A;
+      --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -16px rgba(0,0,0,.8);
+    }
+  }
+  :root[data-theme="light"]{
+    --ground:#EDEEE9;--surface:#FFFFFF;--surface-2:#F5F6F1;--line:#D9DBD3;--line-soft:#E6E8E1;
+    --ink:#1A1D1A;--ink-2:#3D423C;--muted:#6B7268;--accent:#2E6B4F;--accent-soft:#E2ECE6;
+    --hot:#B4611C;--hot-soft:#F6E9DE;--ok:#2E6B4F;--warn:#8A6A16;--warn-soft:#F4EEDC;
+    --stop:#9E3B2E;--stop-soft:#F7E5E1;--on-accent:#FFFFFF;
+    --shadow:0 1px 2px rgba(26,29,26,.05), 0 8px 24px -16px rgba(26,29,26,.28);
+  }
+  :root[data-theme="dark"]{
+    --ground:#161A17;--surface:#1E2320;--surface-2:#232925;--line:#333B35;--line-soft:#2A312C;
+    --ink:#E4E7E1;--ink-2:#BFC5BC;--muted:#8E968B;--accent:#6FBF97;--accent-soft:#1F3329;
+    --hot:#E0904A;--hot-soft:#33251A;--ok:#6FBF97;--warn:#D6B45C;--warn-soft:#2E2917;
+    --stop:#E0857A;--stop-soft:#33201D;--on-accent:#12211A;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -16px rgba(0,0,0,.8);
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0;background:var(--ground);color:var(--ink);
+    font-family:var(--sans);font-size:16px;line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+  @media (max-width:600px){ .wrap{padding:0 14px} }
+
+  a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}
+  a:focus-visible,button:focus-visible,summary:focus-visible{
+    outline:2px solid var(--hot);outline-offset:2px;border-radius:4px;
+  }
+
+  /* ---------- masthead ---------- */
+  header.mast{
+    border-bottom:1px solid var(--line);
+    background:
+      radial-gradient(120% 140% at 88% -10%, var(--accent-soft) 0%, transparent 58%),
+      var(--surface);
+  }
+  .mast-in{display:flex;flex-direction:column;gap:26px;padding:38px 0 30px}
+  .eyebrow{
+    font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--muted);display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 14px;
+  }
+  .eyebrow b{color:var(--hot);font-weight:600}
+  h1{
+    font-family:var(--serif);font-weight:400;font-size:clamp(2.1rem,6.2vw,3.6rem);
+    line-height:1.02;letter-spacing:-.022em;margin:0;text-wrap:balance;
+  }
+  h1 .amp{color:var(--muted);font-style:italic}
+  .deck{
+    font-family:var(--serif);font-style:italic;font-size:clamp(1.02rem,2.4vw,1.28rem);
+    color:var(--ink-2);margin:0;max-width:60ch;
+  }
+
+  .kpis{
+    display:grid;gap:1px;background:var(--line);margin:0;
+    grid-template-columns:repeat(auto-fit,minmax(128px,1fr));
+    border:1px solid var(--line);border-radius:var(--r);overflow:hidden;
+  }
+  .kpi{background:var(--surface);padding:13px 15px 15px;display:flex;flex-direction:column;gap:3px}
+  .kpi dt{
+    font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--muted);margin:0;
+  }
+  .kpi dd{
+    margin:0;font-family:var(--serif);font-size:1.62rem;line-height:1.05;
+    font-variant-numeric:tabular-nums;letter-spacing:-.02em;
+  }
+  .kpi dd small{font-family:var(--sans);font-size:.72rem;color:var(--muted);letter-spacing:0}
+
+  /* ---------- nav ---------- */
+  nav.seg{
+    position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--ground) 88%,transparent);
+    backdrop-filter:blur(10px);border-bottom:1px solid var(--line);
+  }
+  .seg-in{display:flex;gap:2px;overflow-x:auto;padding:8px 0;scrollbar-width:thin}
+  .seg-in a{
+    flex:0 0 auto;padding:7px 13px;border-radius:99px;text-decoration:none;
+    font-size:.83rem;font-weight:600;color:var(--ink-2);white-space:nowrap;
+    border:1px solid transparent;
+  }
+  .seg-in a:hover{background:var(--surface);border-color:var(--line)}
+  .seg-in a[aria-current="true"]{background:var(--accent);color:var(--on-accent);border-color:var(--accent)}
+
+  /* ---------- sections ---------- */
+  section{padding:52px 0 8px;scroll-margin-top:62px}
+  .sec-head{display:flex;flex-direction:column;gap:6px;margin-bottom:22px}
+  .sec-num{
+    font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--hot);
+    text-transform:uppercase;
+  }
+  h2{
+    font-family:var(--serif);font-weight:400;font-size:clamp(1.5rem,3.6vw,2.05rem);
+    margin:0;letter-spacing:-.015em;line-height:1.12;text-wrap:balance;
+  }
+  .sec-note{color:var(--muted);font-size:.9rem;margin:0;max-width:66ch}
+
+  /* ---------- timeline ---------- */
+  .day{
+    position:relative;display:grid;
+    grid-template-columns:78px 1fr;gap:0 18px;
+    border-top:1px solid var(--line-soft);
+  }
+  .day:last-child{border-bottom:1px solid var(--line-soft)}
+  .day-date{
+    position:relative;padding:20px 0 20px 30px;
+    font-family:var(--mono);font-size:.78rem;line-height:1.35;
+    font-variant-numeric:tabular-nums;
+  }
+  .day-date::before{
+    content:"";position:absolute;left:11px;top:0;bottom:0;width:1px;background:var(--line);
+  }
+  .day:first-child .day-date::before{top:20px}
+  .day:last-child .day-date::before{bottom:calc(100% - 26px)}
+  .dot{
+    position:absolute;left:5px;top:20px;width:13px;height:13px;border-radius:50%;
+    background:var(--surface);border:2px solid var(--accent);
+  }
+  .day[data-kind="fly"] .dot{border-color:var(--muted)}
+  .day[data-kind="safari"] .dot{border-color:var(--hot);background:var(--hot)}
+  .day-date b{display:block;font-size:1.02rem;font-weight:600;color:var(--ink)}
+  .day-date span{color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-size:.68rem}
+  .day-body{padding:18px 0 22px;min-width:0}
+  .day-n{
+    font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--muted);margin-bottom:3px;
+  }
+  .day[data-kind="safari"] .day-n{color:var(--hot)}
+  .day-title{
+    font-family:var(--serif);font-size:1.16rem;line-height:1.28;margin:0 0 10px;
+    letter-spacing:-.008em;text-wrap:balance;font-weight:400;
+  }
+  .chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:11px}
+  .chip{
+    display:inline-flex;align-items:center;gap:6px;font-size:.755rem;line-height:1.3;
+    padding:5px 9px;border-radius:6px;border:1px solid var(--line);background:var(--surface-2);
+    color:var(--ink-2);
+  }
+  .chip .k{
+    font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
+  }
+  .chip.bed{background:var(--accent-soft);border-color:transparent;color:var(--ink)}
+  .chip.bed .k{color:var(--accent)}
+  .day-detail{margin:0;color:var(--ink-2);font-size:.925rem;max-width:70ch}
+  @media (max-width:640px){
+    .day{grid-template-columns:1fr}
+    .day-date{padding:16px 0 0;display:flex;gap:8px;align-items:baseline}
+    .day-date::before,.dot{display:none}
+    .day-date b{display:inline;font-size:.88rem}
+    .day-body{padding:2px 0 20px}
+  }
+
+  /* ---------- tables ---------- */
+  .tscroll{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);background:var(--surface)}
+  table{border-collapse:collapse;width:100%;font-size:.87rem;min-width:580px}
+  thead th{
+    text-align:left;font-family:var(--mono);font-size:9.5px;letter-spacing:.11em;
+    text-transform:uppercase;color:var(--muted);font-weight:600;
+    padding:11px 13px;border-bottom:1px solid var(--line);white-space:nowrap;background:var(--surface-2);
+  }
+  tbody td{padding:11px 13px;border-bottom:1px solid var(--line-soft);vertical-align:top}
+  tbody tr:last-child td{border-bottom:none}
+  td.num,th.num{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+  td.mono{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+  tbody tr:hover{background:var(--surface-2)}
+  .rowgroup td{
+    background:var(--surface-2);font-family:var(--mono);font-size:10px;letter-spacing:.11em;
+    text-transform:uppercase;color:var(--muted);padding:8px 13px;
+  }
+  .rowgroup:hover td{background:var(--surface-2)}
+  tfoot td{
+    padding:12px 13px;border-top:1px solid var(--line);font-weight:600;background:var(--surface-2);
+  }
+  .cellnote{color:var(--muted);font-size:.79rem;display:block;max-width:44ch;margin-top:3px}
+  a.src{
+    display:inline-block;margin-top:5px;font-family:var(--mono);font-size:.71rem;
+    letter-spacing:.02em;text-decoration:none;color:var(--accent);
+    border-bottom:1px solid var(--accent-soft);padding-bottom:1px;word-break:break-all;
+  }
+  a.src:hover{border-bottom-color:var(--accent)}
+
+  .tag{
+    display:inline-block;font-size:.68rem;font-family:var(--mono);letter-spacing:.06em;
+    text-transform:uppercase;padding:3px 7px;border-radius:5px;white-space:nowrap;
+  }
+  .tag.ok{background:var(--accent-soft);color:var(--ok)}
+  .tag.opt{background:var(--warn-soft);color:var(--warn)}
+  .tag.warn{background:var(--hot-soft);color:var(--hot)}
+  .tag.stop{background:var(--stop-soft);color:var(--stop)}
+
+  /* ---------- cost ---------- */
+  .cost-grid{display:grid;gap:20px;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);align-items:start}
+  @media (max-width:820px){ .cost-grid{grid-template-columns:1fr} }
+  .panel{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+    padding:20px;box-shadow:var(--shadow);
+  }
+  .panel h3{
+    font-family:var(--sans);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--muted);font-weight:600;margin:0 0 16px;
+  }
+  .bars{display:flex;flex-direction:column;gap:14px}
+  .bar-row{display:grid;grid-template-columns:1fr auto;gap:4px 12px;align-items:baseline}
+  .bar-label{font-size:.9rem}
+  .bar-val{font-family:var(--mono);font-size:.9rem;font-variant-numeric:tabular-nums}
+  .bar-track{
+    grid-column:1 / -1;height:9px;background:var(--surface-2);border-radius:4px;overflow:hidden;
+    border:1px solid var(--line-soft);
+  }
+  .bar-fill{height:100%;background:var(--accent);border-radius:0 4px 4px 0;min-width:2px}
+  .bar-row[data-emph="1"] .bar-fill{background:var(--hot)}
+  .hero-num{
+    font-family:var(--serif);font-size:clamp(2.4rem,7vw,3.3rem);line-height:1;
+    letter-spacing:-.03em;font-variant-numeric:tabular-nums;margin:0;
+  }
+  .hero-sub{color:var(--muted);font-size:.86rem;margin:6px 0 0}
+  .split{display:flex;flex-direction:column;gap:16px}
+  .stat-line{
+    display:flex;justify-content:space-between;gap:12px;align-items:baseline;
+    padding-bottom:10px;border-bottom:1px solid var(--line-soft);
+  }
+  .stat-line:last-child{border-bottom:none;padding-bottom:0}
+  .stat-line .l{font-size:.87rem;color:var(--ink-2)}
+  .stat-line .v{font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:.95rem;white-space:nowrap}
+
+  /* ---------- callout ---------- */
+  .callout{
+    border:1px solid var(--line);border-left:3px solid var(--hot);
+    background:var(--surface);border-radius:var(--r);padding:16px 18px;
+    font-size:.9rem;color:var(--ink-2);
+  }
+  .callout b{color:var(--ink)}
+  .callout.calm{border-left-color:var(--accent)}
+
+  /* ---------- filters ---------- */
+  .filters,.toggle-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;align-items:center}
+  .fbtn{
+    font:inherit;font-size:.82rem;font-weight:600;padding:6px 13px;border-radius:99px;cursor:pointer;
+    border:1px solid var(--line);background:var(--surface);color:var(--ink-2);
+  }
+  .fbtn:hover{border-color:var(--accent)}
+  .fbtn[aria-pressed="true"]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+  .fcount{font-family:var(--mono);font-size:.75rem;color:var(--muted);margin-left:auto}
+
+  /* ---------- accordion ---------- */
+  details.acc{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+    margin-bottom:10px;overflow:hidden;
+  }
+  details.acc>summary{
+    cursor:pointer;list-style:none;padding:15px 18px;display:flex;gap:12px;align-items:center;
+    font-family:var(--serif);font-size:1.06rem;letter-spacing:-.005em;
+  }
+  details.acc>summary::-webkit-details-marker{display:none}
+  details.acc>summary::after{
+    content:"+";margin-left:auto;font-family:var(--mono);font-size:1.15rem;color:var(--muted);
+  }
+  details.acc[open]>summary::after{content:"\2013"}
+  details.acc[open]>summary{border-bottom:1px solid var(--line-soft)}
+  .acc-i{
+    flex:0 0 auto;width:26px;height:26px;border-radius:7px;background:var(--accent-soft);
+    color:var(--accent);display:grid;place-items:center;font-family:var(--mono);font-size:.72rem;font-weight:700;
+  }
+  .acc-body{padding:6px 18px 20px}
+  .country-cols{display:grid;gap:18px 26px;grid-template-columns:1fr 1fr}
+  @media (max-width:860px){ .country-cols{grid-template-columns:1fr} }
+  .country-cols.solo{grid-template-columns:1fr}
+  .cbox{min-width:0}
+  .cbox>h4{
+    font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;
+    margin:0 0 10px;padding-bottom:7px;border-bottom:1px solid var(--line);color:var(--muted);
+  }
+  .cbox[data-c="za"]>h4{color:var(--accent);border-bottom-color:var(--accent)}
+  .cbox[data-c="sz"]>h4{color:var(--hot);border-bottom-color:var(--hot)}
+  .cbox p{margin:0 0 9px;font-size:.885rem;color:var(--ink-2);max-width:68ch}
+  .cbox p:last-child{margin-bottom:0}
+  .cbox p b{color:var(--ink);font-weight:600}
+  .cbox p.li{padding-left:16px;position:relative}
+  .cbox p.li::before{
+    content:"";position:absolute;left:2px;top:.66em;width:5px;height:5px;border-radius:50%;background:var(--muted);
+  }
+  .cbox p.warnline{
+    padding:10px 13px;border-radius:7px;background:var(--stop-soft);color:var(--ink);
+    border-left:2px solid var(--stop);
+  }
+  .cbox p.warnline b{color:var(--stop)}
+  .cbox p.warnline.li{padding-left:26px}
+  .cbox p.warnline.li::before{left:15px;background:var(--stop)}
+  .packlist{
+    display:grid;gap:6px 16px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+    margin:14px 0 0;padding:0;list-style:none;
+  }
+  .packlist li{font-size:.86rem;color:var(--ink-2);padding-left:22px;position:relative;line-height:1.45}
+  .packlist li::before{
+    content:"";position:absolute;left:0;top:.28em;width:12px;height:12px;border-radius:3px;
+    border:1.5px solid var(--line);background:var(--surface-2);
+  }
+
+  /* ---------- mobile: tables become stacked cards ---------- */
+  @media (max-width:640px){
+    .tscroll{border:none;background:transparent;overflow:visible;border-radius:0}
+    table{min-width:0;display:block}
+    thead{display:none}
+    tbody,tfoot{display:block}
+    tbody tr{
+      display:block;background:var(--surface);border:1px solid var(--line);
+      border-radius:var(--r);padding:13px 15px;margin-bottom:10px;
+    }
+    tbody tr:hover{background:var(--surface)}
+    tbody td{
+      display:flex;gap:14px;justify-content:space-between;align-items:baseline;
+      border:none;padding:4px 0;text-align:left;
+    }
+    tbody td::before{
+      content:attr(data-l);flex:0 0 auto;
+      font-family:var(--mono);font-size:9px;letter-spacing:.11em;text-transform:uppercase;
+      color:var(--muted);padding-top:.3em;
+    }
+    tbody td:not([data-l]){display:block;padding:0 0 6px}
+    tbody td:not([data-l])::before{display:none}
+    tbody td.num{text-align:right;justify-content:space-between}
+    tbody td:empty{display:none}
+    .cellnote{max-width:none}
+
+    tbody tr.rowgroup{
+      background:transparent;border:none;padding:0;margin:16px 0 6px;border-radius:0;
+    }
+    tbody tr.rowgroup:first-child{margin-top:0}
+    .rowgroup td{display:block;background:transparent;padding:0;font-size:10px}
+    .rowgroup td::before{display:none}
+
+    tfoot tr{
+      display:block;background:var(--surface-2);border:1px solid var(--line);
+      border-radius:var(--r);padding:13px 15px;
+    }
+    tfoot td{
+      display:flex;gap:14px;justify-content:space-between;align-items:baseline;
+      border:none;padding:4px 0;text-align:left;background:transparent;
+    }
+    tfoot td::before{
+      content:attr(data-l);flex:0 0 auto;
+      font-family:var(--mono);font-size:9px;letter-spacing:.11em;text-transform:uppercase;
+      color:var(--muted);font-weight:400;padding-top:.3em;
+    }
+    tfoot td:not([data-l])::before{display:none}
+    tfoot td:empty{display:none}
+
+    /* comfortable tap targets */
+    .fbtn{padding:9px 15px}
+    .seg-in a{padding:9px 14px}
+    details.acc>summary{padding:16px}
+    .filters .fcount{margin-left:0;width:100%;text-align:right}
+    .panel{padding:17px}
+  }
+
+  footer{
+    margin-top:56px;border-top:1px solid var(--line);background:var(--surface);
+    padding:26px 0 40px;font-size:.82rem;color:var(--muted);
+  }
+  footer p{margin:0 0 8px;max-width:78ch}
+  footer b{color:var(--ink-2)}
+  .hidden{display:none !important}
+  @media (prefers-reduced-motion: reduce){ *{transition:none !important;animation:none !important} }
+  @media print{ nav.seg{display:none} details.acc{break-inside:avoid} }
+</style>
+
+<header class="mast">
+  <div class="wrap mast-in">
+    <div>
+      <p class="eyebrow"><span>Avventure nel Mondo</span><span>·</span><b>Proposta viaggio v00</b><span>·</span><span>16 partecipanti</span></p>
+      <h1>Sudafrica <span class="amp">&amp;</span> eSwatini</h1>
+    </div>
+    <p class="deck">Kruger Discovery — dal Highveld di Johannesburg alla Panorama Route, il Kruger, il regno Swazi e la costa dell'Oceano Indiano fino a Durban.</p>
+    <dl class="kpis" id="kpis"></dl>
+  </div>
+</header>
+
+<nav class="seg" aria-label="Sezioni">
+  <div class="wrap seg-in" id="segnav">
+    <a href="#itinerario">Itinerario</a>
+    <a href="#voli">Voli</a>
+    <a href="#alloggi">Alloggi</a>
+    <a href="#costi">Costi</a>
+    <a href="#escursioni">Escursioni</a>
+    <a href="#info">Info pratiche</a>
+    <a href="#auto">Noleggio auto</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <section id="itinerario">
+    <div class="sec-head">
+      <span class="sec-num">01 — Programma</span>
+      <h2>Itinerario giorno per giorno</h2>
+      <p class="sec-note">13 giorni, 10 notti a terra. Il pallino arancio segna le giornate con attività di safari dedicata.</p>
+    </div>
+    <div id="timeline"></div>
+  </section>
+
+  <section id="voli">
+    <div class="sec-head">
+      <span class="sec-num">02 — Trasporto aereo</span>
+      <h2>Piano voli</h2>
+      <p class="sec-note">Andata via Il Cairo con EgyptAir, da Roma o da Milano. Ritorno con volo interno Durban–Johannesburg operato da FlySafair e rientro via Il Cairo. Tutti gli orari sono locali.</p>
+    </div>
+    <div class="tscroll">
+      <table id="flights">
+        <thead>
+          <tr>
+            <th>Tratta</th><th>Compagnia</th><th>Volo</th><th>Data</th>
+            <th class="num">Partenza</th><th class="num">Arrivo</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p class="sec-note" style="margin-top:12px">Il Cairo → Johannesburg parte a mezzanotte scarsa del 15 e atterra la mattina del 16. Johannesburg → Il Cairo del 26 atterra la mattina del 27.</p>
+  </section>
+
+  <section id="alloggi">
+    <div class="sec-head">
+      <span class="sec-num">03 — Dove si dorme</span>
+      <h2>Alloggi</h2>
+      <p class="sec-note">Camere doppie con colazione, salvo dove indicato. Le strutture marcate <em>prepagato</em> sono già state anticipate da Avventure e si saldano prima della partenza: per quelle non serve contante in loco.</p>
+    </div>
+    <div class="tscroll">
+      <table id="hotels">
+        <thead>
+          <tr><th>Località</th><th>Struttura</th><th class="num">Notti</th><th class="num">€ / persona</th><th>Note</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="costi">
+    <div class="sec-head">
+      <span class="sec-num">04 — Denaro</span>
+      <h2>Previsione di cassa</h2>
+      <p class="sec-note">Stima al netto delle spese personali, su 16 partecipanti e cambio 1&nbsp;€&nbsp;=&nbsp;19,2&nbsp;ZAR. I costi sono suscettibili di modifiche al momento non prevedibili.</p>
+    </div>
+
+    <div class="cost-grid">
+      <div class="panel">
+        <h3>Ripartizione stimata · € a persona</h3>
+        <div class="bars" id="costbars"></div>
+      </div>
+      <div class="split">
+        <div class="panel">
+          <h3>Totale stimato a persona</h3>
+          <p class="hero-num" id="totpp">—</p>
+          <p class="hero-sub" id="totgroup">—</p>
+        </div>
+        <div class="panel">
+          <h3>Confronto con il budget</h3>
+          <div class="split" id="budgetlines"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top:20px">
+      <b>Quanto contante portare.</b> L'indicazione del coordinatore è di avere con sé almeno <b>650&nbsp;€</b> — stima volutamente prudente, escluse le spese personali e le escursioni facoltative fuori programma. Si punta a ottimizzare in corso di viaggio.
+    </div>
+
+    <div class="callout calm" style="margin-top:12px">
+      <b>Contanti o carta: controllate il dettaglio.</b> Nella tabella delle escursioni ogni voce indica se accetta la carta. Ad esempio a Hluhluwe si paga <b>solo in contanti</b>, mentre il full day iSimangaliso accetta la carta. Delle escursioni in programma, 96,30&nbsp;€ sono pagabili con carta e <b>171,22&nbsp;€ vanno in contanti</b>. Se serve, si può comunque prelevare in loco.
+    </div>
+
+    <div class="callout calm" style="margin-top:12px">
+      <b>Come leggere la cassa comune.</b> La cassa comune copre le spese in corso di viaggio non comprese nella quota: pasto principale — di norma la cena — pernottamenti, trasporti quando non già inclusi e alcune escursioni. Il prospetto qui sopra mostra <b>tutti</b> i costi stimati ad oggi, anche quelli fuori cassa comune, per dare un quadro completo. Alcune spese sono state anticipate da Avventure e vanno saldate prima della partenza. Nessun visto è dovuto, quindi quella voce è a zero.
+    </div>
+
+    <div style="margin-top:22px">
+      <h3 style="font-family:var(--sans);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:0 0 12px">Dettaglio voci</h3>
+      <div class="tscroll">
+        <table id="cashdetail">
+          <thead>
+            <tr><th>Voce</th><th>Dettaglio</th><th class="num">€ / persona</th><th class="num">€ gruppo</th><th>Anticipato</th><th>Note</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="escursioni">
+    <div class="sec-head">
+      <span class="sec-num">05 — Esperienze</span>
+      <h2>Escursioni e ingressi</h2>
+      <p class="sec-note">Le voci <em>in programma</em> sono già conteggiate nella previsione di cassa. Le <em>facoltative</em> si pagano sul posto, separatamente in ogni struttura. La colonna <em>Carta</em> dice dove serve il contante.</p>
+    </div>
+    <div class="filters">
+      <button class="fbtn" type="button" data-f="all" aria-pressed="true">Tutte</button>
+      <button class="fbtn" type="button" data-f="yes" aria-pressed="false">In programma</button>
+      <button class="fbtn" type="button" data-f="no" aria-pressed="false">Facoltative</button>
+      <button class="fbtn" type="button" data-f="cash" aria-pressed="false">Solo contanti</button>
+      <span class="fcount" id="excount"></span>
+    </div>
+    <div class="tscroll">
+      <table id="exc">
+        <thead>
+          <tr><th>Attività</th><th>Zona</th><th class="num">ZAR</th><th class="num">€ / persona</th><th>Carta</th><th>Stato</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div id="excnotes" style="margin-top:16px;display:flex;flex-direction:column;gap:10px"></div>
+  </section>
+
+  <section id="info">
+    <div class="sec-head">
+      <span class="sec-num">06 — Prima di partire</span>
+      <h2>Informazioni pratiche</h2>
+      <p class="sec-note">Documenti, guida, sicurezza, clima, valuta, salute, connettività e bagaglio. Dove le regole cambiano tra i due paesi, le due colonne le mettono a confronto.</p>
+    </div>
+
+    <div class="callout calm" style="margin-bottom:18px">
+      <b>Decalogo Avventure.</b> Il Decalogo di Avventure nel Mondo è l'elenco delle "regole del gioco". Consigliata una lettura prima di partire, per comprendere appieno la formula di viaggio.<br>
+      <a href="https://www.viaggiavventurenelmondo.it/info/decalogo" target="_blank" rel="noopener noreferrer">viaggiavventurenelmondo.it/info/decalogo</a>
+    </div>
+
+    <div class="toggle-row">
+      <button class="fbtn" type="button" data-c="both" aria-pressed="true">Entrambi i paesi</button>
+      <button class="fbtn" type="button" data-c="za" aria-pressed="false">Solo Sudafrica</button>
+      <button class="fbtn" type="button" data-c="sz" aria-pressed="false">Solo eSwatini</button>
+    </div>
+
+    <div id="infoacc"></div>
+  </section>
+
+  <section id="auto">
+    <div class="sec-head">
+      <span class="sec-num">07 — Mezzi</span>
+      <h2>Vademecum auto a noleggio</h2>
+      <p class="sec-note">Sezione nuova. Requisiti per intestare i veicoli, coperture assicurative, controlli al ritiro e testo della manleva da far firmare al gruppo.</p>
+    </div>
+
+    <div class="callout" style="margin-bottom:18px">
+      <b>Serve una carta di credito vera, per ogni auto.</b> Il contratto va intestato a chi guida, con patente valida e carta di credito con PIN — <b>non</b> prepagate, <b>non</b> carte di debito. Con due minivan servono due intestatari diversi: non è possibile intestare più auto alla stessa persona. Al ritiro viene bloccato un deposito cauzionale di importo non prevedibile in anticipo.
+    </div>
+
+    <div id="autoacc"></div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><b>Fonte.</b> Riorganizzazione della proposta <em>ANM Sudafrica Kruger Discovery 2026 — Proposta viaggio v00</em>, fogli Info Utili, Piano di viaggio, Piano voli, Escursioni, Previsione Cassa e Vademecum auto a noleggio. Nessun dato è stato aggiunto o stimato oltre a quanto presente nel file originale.</p>
+    <p><b>Avvertenze dal documento originale.</b> I costi indicati sono suscettibili di modifiche al momento non prevedibili. Le liste di medicinali, vaccinazioni e bagaglio sono indicative e non esaustive: per vaccinazioni e profilassi rivolgersi sempre al proprio medico di base e all'Ufficio Vaccinazioni della ULSS di competenza.</p>
+    <p><b>Note di lettura.</b> Nel foglio originale la colonna intitolata "KM stimati" contiene in realtà la numerazione dei giorni: qui non compare quindi alcuna stima chilometrica, perché il file non ne contiene. La giornata del 24 agosto è chiamata "Full Day Cape Vidal" nel Piano di viaggio e "Full day Isimangaliso Park tour" nel foglio Escursioni: è la stessa escursione, riportata qui una sola volta. Il Piano di viaggio nomina il solo "A Travellers Palm" per Phalaborwa mentre la Previsione Cassa indica due strutture: qui sono riportate entrambe, come nella cassa.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* the page may be embedded by a wrapper that supplies its own <head>;
+     guarantee the mobile viewport either way */
+  (function(){
+    var m = document.querySelector('meta[name="viewport"]');
+    if(!m){
+      m = document.createElement("meta");
+      m.setAttribute("name", "viewport");
+      (document.head || document.documentElement).appendChild(m);
+    }
+    m.setAttribute("content", "width=device-width, initial-scale=1, viewport-fit=cover");
+  })();
+
+  var eur = function(n){
+    return n.toLocaleString("it-IT", {minimumFractionDigits:2, maximumFractionDigits:2});
+  };
+  var zarF = function(n){
+    return n.toLocaleString("it-IT", {maximumFractionDigits:0});
+  };
+  function esc(s){
+    return String(s).replace(/&(?![a-z#0-9]+;)/gi,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  }
+  function hostOf(u){
+    try { return new URL(u).hostname.replace(/^www\./, ""); }
+    catch(e){ return u; }
+  }
+
+  /* ============ KPI ============ */
+  var KPIS = [
+    ["Date", "15 – 27 ago", "2026"],
+    ["Durata", "13", "giorni · 10 notti"],
+    ["Partecipanti", "16", "2 minivan"],
+    ["Stima a persona", "900 €", "di cui 631 in contanti"],
+    ["Cambio", "19,2", "ZAR per 1 €"],
+    ["Fuso orario", "0 h", "nessun jet lag"]
+  ];
+  document.getElementById("kpis").innerHTML = KPIS.map(function(k){
+    return '<div class="kpi"><dt>'+k[0]+'</dt><dd>'+k[1]+'<br><small>'+k[2]+'</small></dd></div>';
+  }).join("");
+
+  /* ============ ITINERARIO ============ */
+  var DAYS = [
+    {n:1, d:"15", m:"ago", wd:"sabato", kind:"fly",
+     t:"Italia &rarr; Sudafrica",
+     night:"In volo", hotel:"", transp:"Aereo",
+     detail:"Volo dall'Italia in direzione Johannesburg, via Il Cairo."},
+
+    {n:2, d:"16", m:"ago", wd:"domenica", kind:"road",
+     t:"Johannesburg · Soweto · Maropeng · Pretoria",
+     night:"Pretoria", hotel:"The Fine Line Lodge", transp:"Auto a noleggio",
+     detail:"Atterraggio a Johannesburg alle 07:10, ritiro delle auto e spostamento verso Soweto, con visita guidata della città simbolo dell'apartheid e pranzo tipico locale. In base all'orario, spostamento a Maropeng per la visita al centro della civiltà umana e poi Pretoria per la notte, strategica per gli spostamenti verso il Kruger."},
+
+    {n:3, d:"17", m:"ago", wd:"lunedì", kind:"road",
+     t:"Pretoria · Cullinan Diamond Cave Tour · Alzu Petroport · Sabie",
+     night:"Sabie", hotel:"The Woodsman Bed and Breakfast", transp:"Auto a noleggio",
+     detail:"Partenza dall'hotel verso il Cullinan Diamond Cave Tour, qualora il giorno prima non si fosse riusciti a fare Maropeng, con tour alle 10 o alle 12 e durata di circa 1h 30. Sosta all'Alzu Petroport e arrivo a Sabie."},
+
+    {n:4, d:"18", m:"ago", wd:"martedì", kind:"road",
+     t:"Sabie · Panorama Route · Blyde River Canyon · Phalaborwa",
+     night:"Phalaborwa", hotel:"A Traveller's Palm + iKhaya Ndlovu", transp:"Auto a noleggio",
+     detail:"Partenza da Sabie e percorrenza della Panorama Route, che permette di vedere il Blyde River Canyon. Il percorso principale prevede Graskop Gorge — dove si possono fare diverse attività, dalla zipline all'ascensore panoramico, vedi sezione Escursioni — God's Window, Lisbon Falls, Bourke's Luck Potholes e Three Rondavels. Lista non esaustiva. Arrivo in hotel entro le 18:00, poi dalle 19:00 cena tipica nel safari."},
+
+    {n:5, d:"19", m:"ago", wd:"mercoledì", kind:"safari",
+     t:"Full day safari nel Kruger National Park",
+     night:"Phalaborwa", hotel:"A Traveller's Palm + iKhaya Ndlovu", transp:"Jeep a noleggio",
+     detail:"Partenza direttamente dall'hotel per un safari di un'intera giornata, circa 10 ore. Si viene accompagnati nel Parco Nazionale Kruger a bordo di un veicolo safari scoperto, accolti da Elize e Calvin, guide altamente professionali con una profonda conoscenza della zona e degli animali del Kruger. Durante il tragitto verso l'area picnic dove si fa colazione si osserva la fauna selvatica, con le spiegazioni delle guide. Dopo una leggera colazione si continua l'osservazione fino all'ora di pranzo in uno dei campi, dove ci si può rilassare, ammirare il panorama e acquistare souvenir. Colazione e pranzo inclusi, poi rientro in hotel."},
+
+    {n:6, d:"20", m:"ago", wd:"giovedì", kind:"safari",
+     t:"Phalaborwa · tour del parco in autonomia · Pretoriuskop Rest Camp",
+     night:"Kruger", hotel:"Pretoriuskop Rest Camp", transp:"Auto a noleggio",
+     detail:"Ingresso nel parco Kruger con i van e attraversamento del parco in autonomia fino al Pretoriuskop Rest Camp, dove si pernotta all'interno della riserva."},
+
+    {n:7, d:"21", m:"ago", wd:"venerdì", kind:"road",
+     t:"Pretoriuskop · Malelane Gate · frontiera Swazi · Mlilwane Wildlife Sanctuary",
+     night:"eSwatini", hotel:"Mlilwane Wildlife Sanctuary", transp:"Auto a noleggio",
+     detail:"Partenza dal Pretoriuskop Rest Camp con uscita dal Parco Nazionale del Kruger in direzione eSwatini. Superata la frontiera si procede fino al Mlilwane Wildlife Sanctuary per la notte. Possibilità di organizzare un'escursione al tramonto, da prenotare in anticipo."},
+
+    {n:8, d:"22", m:"ago", wd:"sabato", kind:"road",
+     t:"Mlilwane · Manzini Market · rientro in Sudafrica · Hluhluwe",
+     night:"Hluhluwe", hotel:"Amazulu Guesthouse", transp:"Auto a noleggio",
+     detail:"Mattinata libera con le attività proposte dal santuario: inizio fra le 08:30 e le 09:00, durata stimata circa 2 ore. Ripartenza con passaggio dal Manzini Market, attraversamento del confine con il Sudafrica e arrivo in serata a Hluhluwe."},
+
+    {n:9, d:"23", m:"ago", wd:"domenica", kind:"safari",
+     t:"Hluhluwe · Parco iMfolozi · escursioni · St. Lucia",
+     night:"St. Lucia", hotel:"St. Lucia Safari Lodge", transp:"Auto a noleggio",
+     detail:"Giornata scandita da tre attività, tutte facoltative e già prenotate in base alle preferenze raccolte su WhatsApp. Il pagamento è separato in ogni struttura, con carta di credito o debito. <b>07:00</b> — Hluhluwe-iMfolozi Park tour, ritrovo al Memorial Gate, durata 3 ore. <b>10:30-10:45</b> — Cheetah Project; chi non partecipa può proseguire subito verso St. Lucia con il primo minivan per il deposito bagagli, circa 1h 30-45 di strada. <b>15:00</b> — Hippo &amp; Croc tour, ritrovo al Sunset Jetty. Notte a St. Lucia."},
+
+    {n:10, d:"24", m:"ago", wd:"lunedì", kind:"safari",
+     t:"Full Day Cape Vidal",
+     night:"St. Lucia", hotel:"St. Lucia Safari Lodge", transp:"Auto a noleggio",
+     detail:"Partenza alle 06:00 dall'hotel per l'escursione di un'intera giornata a Cape Vidal, nel parco iSimangaliso. Ha aderito tutto il gruppo. Colazione e rinfreschi serviti, snorkeling in base alle maree, barbecue in spiaggia; rientro fra le 14:00 e le 15:00."},
+
+    {n:11, d:"25", m:"ago", wd:"martedì", kind:"road",
+     t:"St. Lucia · Richard's Bay · Ballito · Durban",
+     night:"Durban", hotel:"Bayside Hotel, 116 West Street", transp:"Auto a noleggio",
+     detail:"Per chi fa l'escursione con le balene, partenza alle 09:00 dall'ufficio Advantage Tours, compatibilmente con il meteo. Poi spostamento verso Richard's Bay per il relax in spiaggia, eventuale sosta a Ballito e arrivo a Durban in serata."},
+
+    {n:12, d:"26", m:"ago", wd:"mercoledì", kind:"fly",
+     t:"Durban &rarr; Johannesburg &rarr; Italia",
+     night:"In volo", hotel:"", transp:"Aereo",
+     detail:"Consegna dei veicoli all'aeroporto e ripartenza da Durban alle 14:20, con coincidenza a Johannesburg per il rientro via Il Cairo."},
+
+    {n:13, d:"27", m:"ago", wd:"giovedì", kind:"fly",
+     t:"Arrivo in Italia",
+     night:"", hotel:"", transp:"Aereo",
+     detail:"Rientro in Italia in mattinata, a Roma Fiumicino o a Milano Malpensa."}
+  ];
+
+  document.getElementById("timeline").innerHTML = DAYS.map(function(x){
+    var chips = "";
+    if(x.night) chips += '<span class="chip bed"><span class="k">Notte</span>'+x.night+'</span>';
+    if(x.hotel) chips += '<span class="chip"><span class="k">Struttura</span>'+x.hotel+'</span>';
+    if(x.transp) chips += '<span class="chip"><span class="k">Mezzo</span>'+x.transp+'</span>';
+    return '<article class="day" data-kind="'+x.kind+'">'
+      + '<div class="day-date"><span class="dot"></span>'
+      + '<b>'+x.d+' '+x.m+'</b><span>'+x.wd+'</span></div>'
+      + '<div class="day-body">'
+      + '<div class="day-n">Giorno '+x.n+'</div>'
+      + '<h3 class="day-title">'+x.t+'</h3>'
+      + '<div class="chips">'+chips+'</div>'
+      + '<p class="day-detail">'+x.detail+'</p>'
+      + '</div></article>';
+  }).join("");
+
+  /* ============ VOLI ============ */
+  var PLUS = ' <span style="color:var(--muted)">+1</span>';
+  var FL = [
+    {g:"Andata", from:"Roma Fiumicino", to:"Il Cairo", co:"EgyptAir", n:"MS 794", date:"15 ago", dep:"18:20", arr:"22:35"},
+    {g:"Andata", from:"Milano Malpensa", to:"Il Cairo", co:"EgyptAir", n:"MS 704", date:"15 ago", dep:"12:55", arr:"17:35"},
+    {g:"Andata", from:"Il Cairo", to:"Johannesburg", co:"EgyptAir", n:"MS 839", date:"15 ago", dep:"23:45", arr:"07:10"+PLUS},
+    {g:"Ritorno", from:"Durban", to:"Johannesburg", co:"FlySafair", n:"FA 345", date:"26 ago", dep:"14:20", arr:"15:35"},
+    {g:"Ritorno", from:"Johannesburg", to:"Il Cairo", co:"EgyptAir", n:"MS 840", date:"26 ago", dep:"21:45", arr:"07:10"+PLUS},
+    {g:"Ritorno", from:"Il Cairo", to:"Roma Fiumicino", co:"EgyptAir", n:"MS 791", date:"27 ago", dep:"10:35", arr:"13:00"},
+    {g:"Ritorno", from:"Il Cairo", to:"Milano Malpensa", co:"EgyptAir", n:"MS 703", date:"27 ago", dep:"08:55", arr:"11:55"}
+  ];
+  (function(){
+    var h = "", last = "";
+    FL.forEach(function(f){
+      if(f.g !== last){ h += '<tr class="rowgroup"><td colspan="6">'+f.g+'</td></tr>'; last = f.g; }
+      h += '<tr><td><b>'+f.from+'</b> <span style="color:var(--muted)">&rarr;</span> '+f.to+'</td>'
+        + '<td data-l="Compagnia">'+f.co+'</td>'
+        + '<td class="mono" data-l="Volo">'+f.n+'</td>'
+        + '<td class="mono" data-l="Data">'+f.date+'</td>'
+        + '<td class="num" data-l="Partenza">'+f.dep+'</td>'
+        + '<td class="num" data-l="Arrivo">'+f.arr+'</td></tr>';
+    });
+    document.querySelector("#flights tbody").innerHTML = h;
+  })();
+
+  /* ============ ALLOGGI ============ */
+  var HOTELS = [
+    {city:"Pretoria", name:"The Fine Line Lodge", nights:1, pp:29.69, pre:false,
+     note:"Camere doppie con colazione."},
+    {city:"Sabie", name:"The Woodsman Bed and Breakfast", nights:1, pp:34.38, pre:true,
+     note:"Camere doppie con colazione."},
+    {city:"Phalaborwa", name:"A Traveller's Palm + iKhaya Ndlovu", nights:2, pp:63.16, pre:false,
+     note:"Colazione inclusa. Gruppo suddiviso su 2 strutture per mancanza di spazio: 1 family loft da 3, 1 standard room da 2, 1 singola, 1 budget twin da 2, 1 family studio da 4 e 2 doppie da 2."},
+    {city:"Kruger", name:"Pretoriuskop Rest Camp", nights:1, pp:58.30, pre:true,
+     note:"Camere doppie, dentro il parco."},
+    {city:"eSwatini", name:"Mlilwane Game Sanctuary Trust", nights:1, pp:48.57, pre:true,
+     note:"Camere doppie con colazione."},
+    {city:"eSwatini", name:"Entry fee riserva", nights:0, pp:6.64, pre:false,
+     note:"Ingresso al santuario, voce separata dal pernottamento."},
+    {city:"Hluhluwe", name:"Amazulu Guest House", nights:1, pp:39.06, pre:false,
+     note:"Camere doppie con colazione."},
+    {city:"St. Lucia", name:"St Lucia Safari Lodge", nights:2, pp:93.88, pre:false,
+     note:"Camere doppie con colazione."},
+    {city:"Durban", name:"Bayside Hotel, 116 West Street", nights:1, pp:31.25, pre:true,
+     note:"Camere doppie con colazione."}
+  ];
+  (function(){
+    var n = 0;
+    document.querySelector("#hotels tbody").innerHTML = HOTELS.map(function(x){
+      n += x.nights;
+      return '<tr><td><b>'+x.city+'</b></td>'
+        + '<td data-l="Struttura">'+x.name+(x.pre ? ' <span class="tag ok">prepagato</span>' : '')+'</td>'
+        + '<td class="num" data-l="Notti">'+(x.nights || "&mdash;")+'</td>'
+        + '<td class="num" data-l="€ / persona">'+eur(x.pp)+'</td>'
+        + '<td><span class="cellnote">'+x.note+'</span></td></tr>';
+    }).join("");
+    var tf = document.createElement("tfoot");
+    tf.innerHTML = '<tr><td>Totale alloggi</td><td></td>'
+      + '<td class="num" data-l="Notti">'+n+' notti</td>'
+      + '<td class="num" data-l="€ / persona">404,92 €</td><td></td></tr>';
+    document.getElementById("hotels").appendChild(tf);
+  })();
+
+  /* ============ COSTI ============ */
+  var COST = [
+    {l:"Hotel e ingressi alloggio", pp:404.92, emph:0},
+    {l:"Escursioni in programma", pp:267.53, emph:1},
+    {l:"Pasti (cene)", pp:200.00, emph:0},
+    {l:"Trasporti (benzina, pedaggi, drop off)", pp:27.63, emph:0},
+    {l:"Visto", pp:0, emph:0}
+  ];
+  (function(){
+    var max = Math.max.apply(null, COST.map(function(c){ return c.pp; }));
+    document.getElementById("costbars").innerHTML = COST.map(function(c){
+      var w = max ? (c.pp / max * 100) : 0;
+      return '<div class="bar-row" data-emph="'+c.emph+'">'
+        + '<span class="bar-label">'+c.l+'</span>'
+        + '<span class="bar-val">'+eur(c.pp)+' €</span>'
+        + '<span class="bar-track"><span class="bar-fill" style="width:'+w.toFixed(1)+'%"></span></span>'
+        + '</div>';
+    }).join("");
+
+    document.getElementById("totpp").textContent = "900,08 €";
+    document.getElementById("totgroup").textContent = "14.401,21 € sul gruppo · 17.281 ZAR a persona";
+
+    document.getElementById("budgetlines").innerHTML = [
+      ["Budget cassa comune", "650,00 €", ""],
+      ["Stima complessiva", "900,08 €", ""],
+      ["Già anticipato o con carta", "− 268,80 €", "color:var(--accent)"],
+      ["Contante da portare", "631,28 €", "color:var(--hot)"]
+    ].map(function(r){
+      return '<div class="stat-line"><span class="l">'+r[0]+'</span>'
+        + '<span class="v"'+(r[2] ? ' style="'+r[2]+'"' : '')+'>'+r[1]+'</span></div>';
+    }).join("");
+  })();
+
+  var CASH = [
+    {v:"Escursioni", det:"Voci marcate come previste", pp:267.53, tot:4280.42, anticipo:false,
+     note:'Vedi la sezione Escursioni, voci "in programma". Di queste, 96,30 € si possono pagare con carta e 171,22 € vanno in contanti.'},
+    {v:"Hotel", det:"9 voci tra pernottamenti e ingressi", pp:404.92, tot:6478.80, anticipo:"parziale",
+     note:"Dettaglio nella sezione Alloggi. 172,50 € sono già anticipati (Sabie, Kruger, Mlilwane, Durban)."},
+    {v:"Pasti", det:"Cene", pp:200.00, tot:3200.00, anticipo:false,
+     note:"Stimati circa 20 €/giorno a persona per la cena, ottimizzabili in corso di viaggio. Ipotesi pranzo al sacco, essendoci le colazioni in hotel o incluse in alcune esperienze."},
+    {v:"Trasporti", det:"Benzina", pp:12.50, tot:200.00, anticipo:false,
+     note:"Stima benzina per i 2 minivan per tutto il viaggio."},
+    {v:"Trasporti", det:"Pedaggi", pp:3.13, tot:50.00, anticipo:false,
+     note:"Pedaggi vari lungo il percorso."},
+    {v:"Trasporti", det:"Drop off e PAI", pp:12.00, tot:192.00, anticipo:false,
+     note:"Vedere il Foglio Notizie definitivo."},
+    {v:"Visto", det:"Non dovuto", pp:0, tot:0, anticipo:false,
+     note:"Nessun visto richiesto ai cittadini italiani per soggiorni turistici brevi in Sudafrica ed eSwatini."}
+  ];
+  (function(){
+    document.querySelector("#cashdetail tbody").innerHTML = CASH.map(function(c){
+      var a = c.anticipo === "parziale"
+        ? '<span class="tag opt">in parte</span>'
+        : (c.anticipo ? '<span class="tag ok">sì</span>' : '<span style="color:var(--muted)">no</span>');
+      return '<tr><td><b>'+c.v+'</b></td>'
+        + '<td data-l="Dettaglio">'+c.det+'</td>'
+        + '<td class="num" data-l="€ / persona">'+eur(c.pp)+'</td>'
+        + '<td class="num" data-l="€ gruppo">'+eur(c.tot)+'</td>'
+        + '<td data-l="Anticipato">'+a+'</td>'
+        + '<td><span class="cellnote">'+c.note+'</span></td></tr>';
+    }).join("");
+    var tf = document.createElement("tfoot");
+    tf.innerHTML = '<tr><td colspan="2">Totale stimato</td>'
+      + '<td class="num" data-l="€ / persona">900,08</td>'
+      + '<td class="num" data-l="€ gruppo">14.401,21</td><td></td><td></td></tr>';
+    document.getElementById("cashdetail").appendChild(tf);
+  })();
+
+  /* ============ ESCURSIONI ============ */
+  var BRC = "https://www.viaggigiovani.it/blog/blyde-river-canyon/";
+  var BGP = "https://biggameparks.org/";
+
+  var EXC = [
+    {n:"Soweto Tour", z:"Johannesburg", zar:450, e:23.44, y:true, card:false,
+     note:"3 ore di tour con pranzo incluso (voce successiva): stadio dei Mondiali 2010, casa di Nelson Mandela e di Bishop Tutu, Hector Pieterson Museum, area di Kliptown."},
+    {n:"Pranzo tipico sudafricano", z:"Johannesburg", zar:300, e:15.63, y:true, card:false},
+    {n:"Cullinan Cave Tour", z:"Pretoria", zar:200, e:10.42, y:true, card:true,
+     u:"https://cullinanminetours.activitar.com/services/4621"},
+    {n:"Alzu Petroport", z:"In transito", zar:0, e:0, y:true, card:true, note:"Sosta lungo la N4, gratuita.",
+     u:"https://it.tripadvisor.ch/Restaurant_Review-g312566-d7161222-Reviews-or45-Alzu_Petroport-Middleburg_Free_State.html"},
+    {n:"Graskop Gorge", z:"Panorama Route", zar:0, e:0, y:true, card:true,
+     note:"Ingresso libero; a pagamento le singole esperienze — ascensore panoramico, zipline e altro.",
+     u:"https://www.graskopgorgeliftcompany.co.za/"},
+    {n:"God's Window", z:"Panorama Route", zar:70, e:3.65, y:true, card:true, u:BRC},
+    {n:"Lisbon Falls", z:"Panorama Route", zar:25, e:1.30, y:true, card:true, u:BRC},
+    {n:"Bourke's Luck Potholes", z:"Panorama Route", zar:150, e:7.81, y:true, card:true, u:BRC},
+    {n:"The Three Rondavels", z:"Panorama Route", zar:90, e:4.69, y:true, card:true, u:BRC},
+    {n:"Mac Mac Falls", z:"Panorama Route", zar:50, e:2.60, y:true, card:true, u:BRC},
+    {n:"Pinnacle Rock", z:"Panorama Route", zar:60, e:3.13, y:true, card:true, u:BRC},
+    {n:"Kruger — Conservation Fee", z:"Kruger", zar:1204, e:62.71, y:true, card:true,
+     note:"Due ingressi al parco."},
+    {n:"Full day safari tour", z:"Kruger", zar:1687.5, e:87.89, y:true, card:false,
+     note:"Circa 10 ore su veicolo safari scoperto con le guide Elize e Calvin. Colazione e pranzo inclusi."},
+    {n:"Cena tipica nel safari", z:"Kruger", zar:850, e:44.27, y:true, card:false,
+     note:"La sera del 18 agosto, dalle 19:00. Vedere il messaggio nel gruppo WhatsApp."},
+
+    {n:"Full day iSimangaliso Park tour — Cape Vidal", z:"St. Lucia", zar:1350, e:70.31, y:false, card:true,
+     note:"È l'escursione del 24 agosto, quella a cui ha aderito tutto il gruppo. Prelievo in pensione alle 06:00. Colazione e rinfreschi serviti, snorkeling dipendente dalle maree, barbecue in spiaggia. Rientro tra le 14:00 e le 15:00. Nel foglio Escursioni non è marcata come prevista, quindi non è compresa nel totale in programma."},
+    {n:"Whale watching", z:"St. Lucia / Richard's Bay", zar:1870, e:97.40, y:false, card:true,
+     note:"Orari: St. Lucia 07:00 e 09:00, Richard's Bay 08:30 e 10:30. St. Lucia è un lancio dalla spiaggia; per minori di 12 anni si usa Richard's Bay, che è un lancio dal porto. Da St. Lucia è previsto un transfer gratuito verso Richard's Bay, dove però la barca porta al massimo 10 persone per volta, mentre a St. Lucia ci sono 2 barche. Tour dipendente dal meteo. Restrizioni: problemi di schiena o cervicali, patologie cardiache, gravidanza."},
+    {n:"Cheetah Project", z:"St. Lucia", zar:450, e:23.44, y:false, card:true,
+     note:"In programma il 23 agosto alle 10:30-10:45, su adesione."},
+    {n:"Hippo and crocodile watching", z:"St. Lucia", zar:260, e:13.54, y:false, card:true,
+     note:"Partenze alle 10:00, 12:00 e 15:00. Punto d'incontro al Sunset Jetty. In programma il 23 agosto alle 15:00, su adesione."},
+    {n:"Safari game 3 ore", z:"Hluhluwe", zar:793.83, e:41.35, y:false, card:false,
+     note:"Hluhluwe-iMfolozi Park tour, il 23 agosto alle 07:00 dal Memorial Gate. Su adesione e pagabile solo in contanti."},
+    {n:"Grotte di Sterkfontein e Maropeng", z:"Pretoria", zar:215, e:11.20, y:false, card:true,
+     u:"https://www.southafrica.net/it/it/travel/article/dove-tutto-ebbe-inizio-centro-visitatori-moaropeng-culla-dellumanit%C3%A0"},
+
+    {n:"Umphakatizi Experience", z:"Mlilwane", zar:200, e:10.42, y:false, card:true, u:BGP,
+     note:"Min 4 persone. Visita a un vero villaggio del capo, trasporto escluso."},
+    {n:"Umphakatizi Combo", z:"Mlilwane", zar:375, e:19.53, y:false, card:true, u:BGP,
+     note:"Min 4 persone. Esperienza nel villaggio più pranzo tradizionale."},
+    {n:"Esitjeni Village Walk", z:"Mlilwane", zar:265, e:13.80, y:false, card:true, u:BGP,
+     note:"Min 4 persone. Camminata guidata attraverso la comunità vicina."},
+    {n:"Roan Drive (90 min)", z:"Mlilwane", zar:350, e:18.23, y:false, card:true, u:BGP,
+     note:"Min 2 persone. Include l'area di reintroduzione dell'antilope roan."},
+    {n:"Sunrise / Sunset Drive (2 h)", z:"Mlilwane", zar:465, e:24.22, y:false, card:true, u:BGP,
+     note:"Min 2 persone. Include tè o caffè e uno snack, oppure un drink al tramonto."},
+    {n:"Guided Game / Birding Walk (150 min)", z:"Mlilwane", zar:280, e:14.58, y:false, card:true, u:BGP,
+     note:"Min 2 persone. Acqua in bottiglia inclusa."},
+    {n:"Guided Services (all'ora)", z:"Mlilwane", zar:200, e:10.42, y:false, card:true, u:BGP,
+     note:"Min 1 persona. Esclusi acqua e noleggio attrezzatura."},
+    {n:"Half Day Walk (4 h)", z:"Mlilwane", zar:435, e:22.66, y:false, card:true, u:BGP,
+     note:"Da 4 a 10 persone. Acqua in bottiglia inclusa."},
+    {n:"Cave Trail — hiking", z:"Mlilwane", zar:1615, e:84.11, y:false, card:true, u:BGP,
+     note:"Min 2 persone. Completamente attrezzato, attrezzatura inclusa, 1 notte."},
+    {n:"Mountain biking self-guided", z:"Mlilwane", zar:165, e:8.59, y:false, card:true, u:BGP,
+     note:"Tariffa oraria per bicicletta."},
+    {n:"Mountain biking guidato (2 h)", z:"Mlilwane", zar:470, e:24.48, y:false, card:true, u:BGP,
+     note:"Tariffa a persona per bicicletta."},
+    {n:"Horse riding (2 h)", z:"Mlilwane", zar:780, e:40.63, y:false, card:true, u:BGP,
+     note:"Non ammessi bambini sotto i 6 anni."},
+    {n:"Kiddie ride a cavallo", z:"Mlilwane", zar:60, e:3.13, y:false, card:true, u:BGP,
+     note:"Bambini fino a 10 anni."},
+    {n:"Rock of Execution Challenge (4 h)", z:"Mlilwane", zar:1395, e:72.66, y:false, card:true, u:BGP,
+     note:"Min 2 persone. Drink e snack inclusi, non ammessi bambini sotto i 6 anni."}
+  ];
+
+  var excBody = document.querySelector("#exc tbody");
+  var excCount = document.getElementById("excount");
+  function renderExc(filter){
+    var rows = EXC.filter(function(x){
+      if(filter === "all") return true;
+      if(filter === "yes") return x.y;
+      if(filter === "no") return !x.y;
+      if(filter === "cash") return x.card === false;
+      return true;
+    });
+    excBody.innerHTML = rows.map(function(x){
+      return '<tr><td><b>'+x.n+'</b>'
+        + (x.note ? '<span class="cellnote">'+x.note+'</span>' : '')
+        + (x.u ? '<a class="src" href="'+x.u+'" target="_blank" rel="noopener noreferrer">'
+                 + hostOf(x.u) + ' &#8599;</a>' : '')
+        + '</td><td style="white-space:nowrap" data-l="Zona">'+x.z+'</td>'
+        + '<td class="num" data-l="ZAR">'+(x.zar ? zarF(x.zar) : "&mdash;")+'</td>'
+        + '<td class="num" data-l="€ / persona">'+(x.e ? eur(x.e) : "gratis")+'</td>'
+        + '<td data-l="Carta">'+(x.card
+            ? '<span class="tag ok">sì</span>'
+            : '<span class="tag stop">contanti</span>')+'</td>'
+        + '<td data-l="Stato">'+(x.y
+            ? '<span class="tag ok">in programma</span>'
+            : '<span class="tag opt">facoltativa</span>')+'</td></tr>';
+    }).join("");
+    var sum = rows.reduce(function(a,b){ return a + (b.e || 0); }, 0);
+    excCount.textContent = rows.length + " voci · " + eur(sum) + " € a persona";
+  }
+  renderExc("all");
+  Array.prototype.forEach.call(document.querySelectorAll(".filters .fbtn"), function(b){
+    b.addEventListener("click", function(){
+      Array.prototype.forEach.call(document.querySelectorAll(".filters .fbtn"), function(o){
+        o.setAttribute("aria-pressed", o === b ? "true" : "false");
+      });
+      renderExc(b.getAttribute("data-f"));
+    });
+  });
+
+  document.getElementById("excnotes").innerHTML =
+      '<div class="callout"><b>Cosa va pagato in contanti.</b> Delle escursioni in programma, 171,22 € a persona non accettano la carta: Soweto Tour, pranzo tipico, full day safari nel Kruger e cena tipica. Anche il tour di Hluhluwe, se lo fate, è solo contanti. Usate il filtro "Solo contanti" per vedere l\'elenco.</div>'
+    + '<div class="callout calm"><b>Cape Vidal e iSimangaliso sono la stessa escursione.</b> È la giornata del 24 agosto, a cui ha aderito tutto il gruppo. Nel foglio Escursioni la voce è marcata come facoltativa, quindi i suoi 70,31 € non rientrano nel totale in programma né nella previsione di cassa. Si paga con carta.</div>'
+    + '<div class="callout calm"><b>Whale watching: il vincolo di capienza.</b> È la facoltativa più cara, 97,40 € a persona. Da Richard\'s Bay la barca imbarca 10 persone alla volta, quindi per un gruppo da 16 servirebbero due turni; da St. Lucia le barche sono due. Dipende dal meteo. È collocata la mattina del 25 agosto, con partenza alle 09:00 dall\'ufficio Advantage Tours.</div>';
+
+  /* ============ INFO PRATICHE ============ */
+  var T = {
+    dati: {
+      za: "Posizione: Stato situato all'estremità meridionale del continente africano, bagnato a ovest dall'Oceano Atlantico e a est dall'Oceano Indiano.\nCapitale: Pretoria (esecutiva), Città del Capo (legislativa) e Bloemfontein (giudiziaria).\nSuperficie: circa 1.221.037 km²\nPopolazione: circa 65,4 milioni (stima 2026)\nLingua ufficiale: 12 lingue ufficiali, tra cui le più diffuse sono lo Zulu (isiZulu), lo Xhosa (isiXhosa) e l'Afrikaans.\nAltre lingue parlate: l'inglese è la lingua principale per affari, turismo, governo e istruzione.\nReligioni: maggioranza cristiana, circa l'80% tra protestanti, cattolici e chiese indipendenti africane. Minoranze induiste, musulmane e legate alle credenze tradizionali.\nIndicatori sociali: paese a medio-alto indice di sviluppo umano, con eccellenze infrastrutturali e mediche d'avanguardia ma segnato da forti disuguaglianze economiche e sfide strutturali legate all'occupazione.\nTradizioni e cultura: la filosofia comunitaria dell'Ubuntu (\"Io sono perché noi siamo\"), la cultura sociale del braai — il barbecue — la musica corale Isicathamiya, le danze tradizionali guerriere Zulu e una grandissima passione nazionale per rugby, calcio e cricket.",
+      sz: "Posizione: piccolo stato dell'Africa meridionale, senza sbocchi sul mare, incastonato sul fianco orientale del Sudafrica e confinante a est con il Mozambico.\nCapitale: Mbabane (amministrativa) e Lobamba (reale e legislativa).\nSuperficie: circa 17.364 km²\nPopolazione: circa 1,26 milioni (stima 2026)\nLingua ufficiale: Swati (siSwati) e inglese.\nAltre lingue parlate: l'inglese è ampiamente utilizzato e dominante nel commercio, nell'amministrazione statale e nei cicli scolastici superiori.\nReligioni: maggioranza cristiana, circa il 90%, spesso in forme sincretiche che fondono il cristianesimo con i riti e le credenze tradizionali dei clan Swazi.\nIndicatori sociali: una delle ultime monarchie assolute del pianeta, con un'economia strettamente legata a quella del Sudafrica. Gli indicatori di welfare e aspettativa di vita sono in costante e netto miglioramento nell'ultimo decennio grazie a programmi sanitari globali.\nTradizioni e cultura: forte attaccamento alle cerimonie tradizionali intatte della monarchia, come la celebre Umhlanga (Danza dei Giunchi) e l'Incwala (festa del primo raccolto). Grande tradizione di artigianato locale, in particolare la lavorazione del vetro riciclato e la creazione di candele artistiche."
+    },
+    frontiera: {
+      za: "Passaporto: deve avere una validità residua di almeno 30 giorni oltre la data prevista di uscita dal paese.\n!Pagine del passaporto: requisito tassativo di almeno 2 pagine consecutive completamente bianche, escluse le pagine dei messaggi e note. In mancanza di queste, le autorità negano l'imbarco o l'ingresso a Johannesburg.\nVisto: i cittadini italiani sono esenti da visto per soggiorni turistici fino a 90 giorni. Il permesso di soggiorno (Border Pass) viene rilasciato gratuitamente all'arrivo in aeroporto.\nFormalità di frontiera e dogana: all'arrivo vengono registrati i dati biometrici, impronte digitali e foto. È necessario compilare il modulo doganale; ingresso e uscita di valuta sono regolamentati, con limite di 25.000 ZAR in contanti oltre il quale scatta l'obbligo di dichiarazione.\n- Divieto: è rigorosamente vietato importare o esportare parti di flora e fauna protette — corna di rinoceronte, avorio, pelli non certificate o souvenir di specie CITES.\n- Divieto: è vietato entrare e uscire dal paese con le storiche monete d'oro Krugerrand senza una specifica autorizzazione o prova d'acquisto in valuta straniera, con un massimo di 15 monete in uscita.\n- Divieto: è severamente vietato far volare droni dentro il Kruger National Park e in qualsiasi altra riserva nazionale senza permessi governativi speciali rilasciati da CAA e SANParks. Il drone viene sequestrato immediatamente al cancello d'ingresso.",
+      sz: "Passaporto: deve avere una validità residua di almeno 3 mesi, 90 giorni, dalla data di ingresso nel paese.\nPagine del passaporto: almeno 2 pagine completamente bianche per i timbri di ingresso e uscita. Rientrando in Sudafrica dopo la visita, il passaporto deve disporre di ulteriori pagine libere per i successivi controlli sudafricani.\nVisto: i cittadini italiani non hanno bisogno di visto per soggiorni turistici inferiori ai 30 giorni. Il timbro viene apposto gratuitamente al posto di frontiera terrestre.\n!Formalità di frontiera stradale: il passaggio avviene solitamente via terra, ai border post di Jeppes Reef, Lavumisa o Oshoek. Chi viaggia in self-drive o con un mezzo a noleggio deve presentare obbligatoriamente la Cross-Border Letter, l'autorizzazione scritta rilasciata dall'autonoleggio sudafricano.\nTassa stradale: al controllo di frontiera in ingresso è obbligatorio pagare una tassa automobilistica locale (Road Fund Levy) di circa 150 SZL/ZAR per le autovetture, saldata in contanti usando i Rand sudafricani. La ricevuta va conservata a bordo del veicolo.\n- Divieto: assoluto divieto di importare prodotti freschi, carne, vegetali e latticini non sigillati o privi di certificazione, per ragioni di sicurezza fitosanitaria ai confini terrestri.\n- Divieto: è vietato fotografare o riprendere nei pressi di posti di blocco militari, uffici di frontiera, caserme, palazzi reali o cortei della famiglia reale.\n- Divieto: è vietato introdurre o utilizzare droni commerciali o ricreativi senza approvazione preventiva scritta del Ministero dei Trasporti e delle autorità dell'aviazione civile di eSwatini (SWACAA)."
+    },
+    guida: {
+      za: "Tipologia di patente: serve la patente di guida internazionale, modello Convenzione di Ginevra 1949 o Vienna 1968, insieme alla patente italiana in corso di validità. In alternativa le compagnie di noleggio accettano la patente italiana solo se accompagnata da una traduzione ufficiale in inglese con timbro giurato.\nSenso di marcia: si guida a sinistra, con volante a destra, e si sorpassa a destra. Fuori autostrada chi viaggia piano tende a spostarsi temporaneamente sulla corsia di emergenza (yellow lane) per agevolare il sorpasso, ed è uso locale ringraziare con un breve lampeggio delle quattro frecce.\nLimiti di velocità: 120 km/h in autostrada, 100 km/h sulle extraurbane principali e 60 km/h nei centri urbani, salvo diversa indicazione. I controlli con autovelox fissi e mobili sono frequenti, soprattutto vicino alle città e lungo la Panorama Route.\nIncroci a 4 vie (four-way stop): agli incroci senza semaforo ha la precedenza il primo veicolo che si ferma fisicamente allo stop. L'ordine di ripartenza segue rigorosamente l'ordine di arrivo all'incrocio.\nSemafori (i \"robots\"): localmente si chiamano robots. Attenzione all'incolumità personale di notte: in alcune zone urbane isolate o a rischio di Johannesburg e Pretoria, col rosso notturno è tollerato rallentare e impegnare l'incrocio con estrema cautela senza fermarsi del tutto, per evitare tentativi di rapina (carjacking).\n!- Tasso alcolemico: limite massimo 0,05 g/l, estremamente basso. La tolleranza è minima e le sanzioni prevedono l'arresto immediato.\n- Divieto: è severamente vietato l'uso del telefono cellulare alla guida, salvo vivavoce bluetooth.\n!- Nei parchi: dentro il Kruger e le riserve è assolutamente vietato scendere dal veicolo fuori dalle aree recintate e dai rest camp segnalati, guidare fuori dalle piste tracciate e superare il limite di velocità interno, solitamente 50 km/h su asfalto e 40 km/h su sterrato.",
+      sz: "Tipologia di patente: anche in eSwatini è richiesta la patente internazionale affiancata da quella italiana in corso di validità. Valgono le stesse specifiche richieste per il transito e i controlli sudafricani.\nSenso di marcia: si guida a sinistra. Le strade principali, come la MR3 che attraversa il paese, sono generalmente in buone condizioni e asfaltate, ma le secondarie sono sterrate e possono richiedere mezzi con una buona altezza da terra.\nAnimali e ostacoli sulla carreggiata: massima attenzione nella guida extraurbana. Le strade non sono recintate ed è estremamente comune trovare bestiame — mucche, capre — o cavalli vaganti sulla carreggiata. Inoltre le strade sono disseminate di dossi artificiali molto alti (speed humps), spesso non segnalati, posizionati vicino ai villaggi.\n!Guida notturna: fortemente sconsigliata. La quasi totale assenza di illuminazione pubblica, la presenza di pedoni sul ciglio della strada e il rischio di collisione con animali rendono la guida notturna ad alto rischio.\nParcheggi e sicurezza: nei centri urbani come Mbabane o Manzini, e vicino ai mercati, conviene affidare l'auto ai \"car watchers\" autorizzati, riconoscibili dal gilet catarifrangente, lasciando una piccola mancia in Rand al ritorno.\n- Divieto: assoluto divieto di superare i limiti locali, solitamente 80 km/h sulle statali e 60 km/h nei centri abitati. La polizia effettua frequenti posti di blocco con radar mobili.\n- Posti di blocco: è obbligatorio arrestare completamente il veicolo, spegnere i fari, abbassare il finestrino e attendere le istruzioni dell'agente prima di slacciare le cinture o cercare i documenti nel cruscotto."
+    },
+    sicurezza: {
+      za: "- Sicurezza urbana (Johannesburg, Pretoria, Durban): il livello di criminalità urbana è molto elevato. Nei centri storici (CBD) di Johannesburg e Durban, e a Pretoria, è tassativo non camminare a piedi dopo il tramonto e muoversi solo con veicoli o taxi tramite app di ride-hailing come Uber o Bolt. Di giorno si consiglia di non mostrare gioielli, orologi di lusso o macchine fotografiche vistose e di non addentrarsi mai nelle township senza una guida locale certificata.\n!- Sicurezza stradale e \"smash and grab\": ai semafori urbani o sulle rampe di uscita autostradali le portiere devono essere sempre bloccate e i finestrini completamente chiusi. Borse, zaini e cellulari non vanno mai lasciati sui sedili ma nascosti nel bagagliaio, per prevenire i furti con rottura del cristallo. Di notte, fuori dalle aree metropolitane, la guida è sconsigliata per buche profonde (potholes) e animali sulla carreggiata.\n- Gestione del loadshedding: il paese sperimenta periodicamente il loadshedding, interruzioni programmate della corrente per alleggerire la rete. Durante i blackout i semafori smettono di funzionare, trasformando l'incrocio in un arresto a 4 vie in cui si passa a turno, e la rete cellulare può rallentare. I lodge e gli hotel a Ballito, St. Lucia o Sabie sono quasi tutti dotati di generatori privati o pannelli solari, ma conviene sempre viaggiare con una torcia e un power bank carico.\n!- Norme di sicurezza nei safari (Kruger, Hluhluwe): gli animali selvatici sono imprevedibili e pericolosi. Dentro i parchi è assolutamente vietato scendere dai mezzi fuori dai campi recintati, sporgersi dai finestrini o dai tetti apribili e fare rumori molesti per attirare la fauna. Ai cancelli d'accesso e lungo le vie di avvicinamento al parco, come l'area di Sabie o i gate occidentali, attenzione a truffe da parte di finti agenti turistici o tentativi di scippo ai veicoli fermi in coda.\n- Interazioni culturali e saluti: i sudafricani sono persone estremamente calde e aperte. Un saluto cordiale (\"Hello\", \"Good morning\") è fondamentale prima di iniziare qualsiasi transazione o richiesta di informazioni. Tra la popolazione nera e nel KwaZulu-Natal — Hluhluwe, St. Lucia, Ballito, Durban — il rispetto per gli anziani è prioritario: buona norma salutarli con i titoli \"Mama\" per le donne e \"Baba\" per gli uomini.\n- Cultura Zulu ed etichetta locale: nelle zone costiere e interne del KwaZulu-Natal si attraversa la culla della cultura Zulu. Nel salutare o interagire, un cenno del capo o una stretta di mano morbida accompagnata da un sorriso sono molto apprezzati. Guardare una persona anziana o un'autorità troppo intensamente negli occhi può essere percepito come provocatorio. Quando si passa un oggetto o si porge del denaro è ottima educazione usare la mano destra, o entrambe le mani per mostrare grande rispetto, mai la sinistra da sola.\n- Mance ed etichetta al ristorante (il braai): la mancia è un pilastro sociale. Nei ristoranti di Durban, Ballito o Johannesburg si lascia di norma il 10-15% del totale, controllando che non sia già inclusa per tavoli numerosi. Ai rifornimenti di carburante, ai facchini d'hotel e ai parcheggiatori autorizzati si lascia una piccola mancia, tra i 5 e i 20 Rand. Se si viene invitati a un braai, il barbecue tradizionale, l'atmosfera è informale ma è consuetudine che gli ospiti contribuiscano portando vino, dolci o carne da condividere; i tempi sociali attorno al fuoco sono molto rilassati.\n!- Divieti culturali e temi sensibili: è profondamente irrispettoso indicare persone o oggetti con l'indice — si preferisce un cenno del mento o della mano aperta. È vietato fotografare installazioni militari, uffici governativi, ponti ferroviari e personale di polizia in servizio. Nelle conversazioni è fortemente consigliato evitare la politica interna corrente, le dinamiche dell'apartheid e le tensioni etniche o razziali, a meno che non sia l'interlocutore ad aprire il discorso.",
+      sz: "- Sicurezza generale: il livello di criminalità in eSwatini è decisamente inferiore rispetto alle grandi metropoli sudafricane e l'atmosfera è molto più rilassata. Tuttavia, a Mbabane e Manzini e nei mercati affollati occorre attenzione ai borseggiatori. Le aggressioni ai turisti sono rare, ma si raccomanda comunque di evitare spostamenti a piedi o in aree isolate dopo il tramonto.\n!- Rispetto della monarchia: eSwatini è una monarchia assoluta e le figure del Re (Ngwenyama) e della Regina Madre (Ndlovukazi) sono trattate con venerazione quasi sacrale. È severamente vietato criticare, ironizzare o esprimere giudizi negativi sulla famiglia reale, sulle spese della corona o sulla forma di governo. Qualsiasi commento percepito come lesivo della dignità reale può comportare l'arresto immediato o l'espulsione dal paese.\n!- Divieti di fotografia rigidi: è assolutamente vietato fotografare o registrare video in direzione di palazzi reali, uffici governativi, caserme della polizia, installazioni militari o posti di blocco di frontiera. Incrociando un corteo della famiglia reale lungo le statali è obbligatorio accostare sul lato sinistro, arrestare la marcia e non effettuare alcuna ripresa fino al completo passaggio della scorta.\n- Abbigliamento e decoro pubblico: la società Swazi è profondamente conservatrice. Nelle comunità rurali e durante le visite ai mercati tradizionali o ai villaggi culturali è richiesto un abbigliamento decoroso: da evitare pantaloni eccessivamente corti, canottiere scollate o indumenti troppo succinti. Durante le cerimonie tradizionali come l'Umhlanga o l'Incwala, se aperte al pubblico, seguire scrupolosamente le indicazioni delle guide su abbigliamento e posizionamento.\n- Fotografare la popolazione locale: la ricchezza culturale del paese offre straordinari spunti fotografici, in particolare nei mercati artigianali della valle di Malkerns o di Ezulwini. È però una regola di rispetto tassativa chiedere sempre il permesso prima di inquadrare una persona, specialmente donne, bambini o anziani in abiti tradizionali. Un piccolo cenno o la frase \"May I take a picture?\" evita qualsiasi fraintendimento."
+    },
+    clima: {
+      za: "Fuso orario: GMT+2, South Africa Standard Time. Durante la finestra del tour, 15-27 agosto, in Italia è in vigore l'ora legale (+2): non c'è quindi alcuna differenza di fuso orario e nessun jet lag, un vantaggio enorme per iniziare subito le attività.\nCaratteristiche climatiche a metà agosto: è la fine dell'inverno australe e la transizione verso la primavera. Il clima è fortemente influenzato da altitudine e vicinanza all'oceano e divide l'itinerario in due macro-zone: l'interno — altopiano e savana — con giornate secche e soleggiate e notti molto fredde, e la costa del KwaZulu-Natal, decisamente più calda, umida e subtropicale.\nZona Highveld, Johannesburg e Pretoria a circa 1.700 m: diurne 20-22 °C con giornate limpide e ventilate; notte e alba 4-6 °C, con forti escursioni termiche e minime vicine allo zero nelle primissime ore. Precipitazioni praticamente assenti, sotto i 5 mm nel mese, cielo sereno 28 giorni su 30. Umidità relativa molto bassa, 30-35%.\nZona Lowveld e Panorama Route, Sabie, Kruger e Hluhluwe: diurne 26-28 °C, ideali per i safari, calde ma non afose; notte e alba 9-12 °C, fresche o fredde durante i game drive mattutini in jeep aperte. Precipitazioni molto basse, 7-10 mm. È il culmine della stagione secca: la vegetazione è bassa e ingiallita, il che facilita enormemente l'avvistamento degli animali che si radunano attorno alle poche pozze rimaste. Umidità relativa bassa, 40-45%.\nCosta subtropicale del KwaZulu-Natal, St. Lucia, Ballito e Durban: diurne 23-25 °C, clima piacevole primaverile o estivo; notte 14-16 °C, fresco ma gradevole. Precipitazioni moderate, 35-45 mm, con possibili brevi rovesci legati ai venti oceanici del sud. Umidità relativa medio-alta, 65-70%. La temperatura dell'acqua dell'Oceano Indiano si aggira sui 21 °C.\n!Consigli per il viaggiatore: è tassativo l'abbigliamento a cipolla. Per i safari mattutini nel Kruger e a Hluhluwe sono indispensabili giacca antivento, pile pesante, berretto di lana e guanti. Entro mezzogiorno le temperature salgono fino a richiedere t-shirt e pantaloncini. Portare crema solare ad alta protezione e burrocacao, perché l'aria dell'altopiano secca molto le labbra.",
+      sz: "Fuso orario: identico al Sudafrica, GMT+2. Anche durante il transito nel Regno non ci sarà alcuna differenza oraria rispetto all'Italia nel mese di agosto.\nCaratteristiche climatiche a metà agosto: il clima ricalca fedelmente la transizione stagionale sudafricana, ma è fortemente frammentato dalla topografia, che varia dalle montagne dell'Alto Veld a ovest alle pianure del Basso Veld a est. In questo periodo il paese è per lo più secco, con paesaggi spettacolari ma brulli.\nZona Alto Veld, Mbabane ed Ezulwini Valley: diurne 21-23 °C, clima mite e soleggiato; notte 6-8 °C, con temperature che scendono rapidamente subito dopo il tramonto. Precipitazioni molto scarse, sotto i 15 mm. Umidità relativa bassa, 40%.\nZona Basso Veld, pianure e riserve verso est: diurne 26-27 °C, clima caldo e piacevole; notte 10-12 °C, fresco ma meno pungente che in montagna. Precipitazioni quasi nulle, 5-10 mm. Umidità relativa bassa, 45%.\nConsigli per il viaggiatore: ad agosto il sole tramonta presto, intorno alle 17:30-17:45. Poiché le temperature crollano non appena il sole scompare dietro le montagne, tenere sempre a portata di mano una giacca o un maglione nel veicolo durante i trasferimenti pomeridiani. Le giornate limpide offrono un'eccellente visibilità sui panorami montani."
+    },
+    valuta: {
+      za: "Valuta ufficiale: il Rand sudafricano (ZAR), simbolo locale \"R\". Le banconote sono dedicate ai Big Five della fauna africana da un lato e al volto di Nelson Mandela dall'altro.\nTasso di cambio medio: storicamente volatile, negli ultimi anni si è stabilizzato tra 1 EUR = 18,50 ZAR e 1 EUR = 20,50 ZAR. Si consiglia di verificare il tasso esatto a ridosso della partenza per il calcolo preciso.\nCarte di credito e di debito: il Sudafrica è un paese quasi interamente cashless. Visa e Mastercard sono accettate ovunque, dai grandi hotel di Johannesburg e Durban ai distributori di carburante lungo la Panorama Route, ai ristoranti di Ballito e persino ai piccoli negozi di souvenir ai gate del Kruger. American Express e Diners sono meno diffuse e soggette a commissioni più alte.\nATM: ampiamente diffusi in tutte le città, nei centri commerciali, nelle stazioni di servizio principali e nei rest camp strutturati del Kruger come Skukuza o Satara. Per sicurezza usare esclusivamente ATM dentro banche, centri commerciali o aeroporti, evitando assolutamente sportelli isolati in strada per il rischio di clonazione.\nContante e mance: sebbene la carta sia sovrana, è indispensabile avere sempre una piccola scorta di contanti in banconote di piccolo taglio — R10, R20, R50 — per i benzinai, che lavano anche i vetri, i facchini dei lodge a Sabie o Hluhluwe e soprattutto i car watchers a St. Lucia, Ballito e Durban, dove R5-R10 sono la norma.\n!Regola tassativa: prima di partire contattare la propria banca in Italia per abilitare le carte all'area geografica del Sudafrica, spesso bloccata di default per prevenzione frodi, e verificare i massimali di prelievo all'estero. Attivare sempre le notifiche SMS o push per ogni transazione.",
+      sz: "Valuta ufficiale: il Lilangeni dell'eSwatini (SZL), al plurale Emalangeni (E).\nAggancio monetario: il Lilangeni è legalmente agganciato al Rand sudafricano con cambio fisso 1:1. Di conseguenza il valore rispetto all'euro rispecchia esattamente quello dello ZAR.\nUso del Rand in eSwatini: ottima notizia per la logistica del tour — il Rand sudafricano è accettato legalmente e universalmente in tutto il paese, in qualsiasi transazione commerciale. Non è quindi necessario cambiare euro in Lilangeni.\n!Gestione del resto: sebbene si possa pagare ovunque in Rand, i commercianti locali o i mercati artigianali di Ezulwini o Malkerns potrebbero dare il resto in Emalangeni. Poiché il Lilangeni non è accettato in Sudafrica e non è convertibile fuori dal paese, spendere tutte le monete e banconote locali prima di riattraversare il confine. Si può chiedere cortesemente il resto in Rand, se disponibile.\nCarte di credito e ATM: Visa e Mastercard sono accettate nei lodge, nei ristoranti principali e nei supermercati di città come Mbabane e Manzini, ma l'accettazione è decisamente meno diffusa che in Sudafrica nelle aree rurali o nei mercati tradizionali. Gli ATM sono presenti nelle città principali, affiliati alle grandi banche sudafricane — Standard Bank, FNB, Nedbank — e consentono di prelevare valuta locale.\nRegola di transazione: usando carte in eSwatini la transazione viene spesso processata attraverso il sistema bancario sudafricano. Assicurarsi che lo sblocco territoriale fatto con la propria banca copra esplicitamente entrambi i paesi, per evitare blocchi di sicurezza automatici al primo utilizzo oltre frontiera."
+    },
+    salute: {
+      za: "!Premessa: le indicazioni derivano dai principali siti istituzionali, unite a indicazioni di viaggio dei precedenti coordinatori, e possono non essere esaustive. Su vaccinazioni e medicinali è caldamente suggerito di consultare sempre il proprio medico di base e l'Ufficio Vaccinazioni presso la ULSS della propria città.\n- Vaccinazioni obbligatorie: nessuna vaccinazione è richiesta ai viaggiatori provenienti dall'Italia. L'unico obbligo formale riguarda la febbre gialla, ma solo se si proviene da un paese a rischio di trasmissione o se si è transitati per più di 12 ore nell'aeroporto di un paese a rischio.\n- Vaccinazioni consigliate: rivolgersi alla propria ASL.\n- Profilassi antimalarica: il rischio varia sensibilmente per stagione e geografia. Aree a rischio zero: Johannesburg, Pretoria, le zone montane di Sabie (Highveld) e la costa meridionale, Ballito e Durban. Aree a rischio moderato: il Kruger National Park, basso-medio rischio, e le riserve del KwaZulu-Natal settentrionale, Hluhluwe e St. Lucia. La finestra del viaggio, 15-27 agosto, coincide con il culmine dell'inverno australe e della stagione secca: le temperature notturne basse e la quasi totale assenza di ristagni d'acqua abbattono drasticamente la presenza di zanzare Anopheles. Per questo periodo la profilassi farmacologica — Malarone o doxiciclina — è spesso considerata facoltativa o sostituibile con una rigorosa prevenzione comportamentale. Resta fondamentale consultare la ASL prima della partenza per una valutazione personalizzata.\n- Prevenzione comportamentale: la difesa principale contro i vettori è l'uso di repellenti cutanei ad alta concentrazione, DEET dal 30% in su o icaridina. Dal tramonto all'alba, in particolare durante i safari serali e nei rest camp del Kruger o a St. Lucia, indossare camicie a maniche lunghe, pantaloni lunghi e calzini, preferendo colori chiari: nero e blu scuro attirano gli insetti.\n- Acqua e igiene alimentare: nelle grandi città e nei rest camp strutturati del Kruger l'acqua del rubinetto è potabile, clorata e considerata sicura. È comunque sempre consigliato consumare acqua in bottiglia sigillata, evitare il ghiaccio nelle bevande fuori dalle strutture turistiche principali e sbucciare la frutta.\n- Farmaci personali: in caso di farmaci salvavita portare anche la prescrizione del medico in lingua inglese, con nome e specialità del dottore ben visibili. Metterli nel bagaglio a mano.\n- Kit generale, lista indicativa e non esaustiva: antipiretici e antinfiammatori per febbre, mal di denti e dolori; analgesici; antibiotico a largo spettro o antibiotico intestinale per forme serie di diarrea del viaggiatore; antidiarroico; fermenti lattici da viaggio; lassativi; farmaci per malattie da raffreddamento; pomate per contusioni e distorsioni, fasce elastiche e il necessario per piccole ferite — disinfettante, garze, cerotti; integratore di sali minerali; antistaminici per chi soffre di allergie; farmaci per irritazioni o morsi di insetto; gel igienizzante e salviette; farmaci o braccialetti per mal d'auto e mal di mare.\n- Altri suggerimenti: portare protettivi antizanzare; facoltativo spruzzare biocida sui vestiti, dove una applicazione basta per più settimane. Non toccare animali selvatici, che possono essere portatori di rabbia e altre malattie. Non consumare cibi in vendita lungo le strade, o limitarne l'uso. Disinfettare verdure fresche e frutta. Consumare carne solo se ben cotta.",
+      sz: "!Premessa: valgono le stesse avvertenze del Sudafrica. Le indicazioni possono non essere esaustive e per vaccinazioni e medicinali va sempre consultato il medico di base e l'Ufficio Vaccinazioni della propria ULSS.\n- Vaccinazioni obbligatorie: nessuna, per chi proviene direttamente dall'Italia o dal Sudafrica. Anche qui l'obbligo di vaccinazione contro la febbre gialla scatta solo in caso di provenienza da aree endemiche.\n- Profilassi antimalarica: il Regno di eSwatini ha compiuto passi da gigante negli ultimi anni, riducendo drasticamente i tassi di trasmissione. Le zone collinari e montane occidentali — Mbabane, Ezulwini Valley — sono completamente libere dal rischio. Un rischio molto basso e localizzato sussiste solo nelle pianure orientali confinanti con il Mozambico. Date le temperature fresche di metà agosto, le misure di protezione contro le punture — repellenti e abbigliamento coprente la sera — sono ritenute ampiamente sufficienti.\n!- Acqua potabile: a differenza del Sudafrica, l'acqua del rubinetto in eSwatini non è considerata batteriologicamente sicura per i turisti stranieri, nemmeno nelle città principali come Mbabane. È tassativo bere esclusivamente acqua imbottigliata, usandola anche per lavarsi i denti. Consumare cibi ben cotti e fare attenzione alle verdure crude nei mercati locali.\n!- Rischio schistosomiasi (bilharzia): divieto sanitario tassativo. Non fare il bagno, non camminare scalzi e non immergere le mani in acque dolci stagnanti, fiumi o laghi del paese, inclusi i corsi d'acqua nella Ezulwini Valley. Molti bacini idrici dell'Africa australe sono contaminati dal parassita. Le piscine dei lodge turistici principali sono invece regolarmente clorate e sicure.\n- Reperibilità dei farmaci: sebbene Mbabane e Manzini abbiano farmacie discrete, la reperibilità di farmaci specifici o di marca occidentale è molto limitata rispetto al Sudafrica. È fondamentale entrare nel paese già provvisti di tutto il kit medico necessario, affidandosi alle eccellenti strutture private sudafricane in caso di emergenze maggiori prima o dopo il transito nel Regno."
+    },
+    tech: {
+      za: "Operatori di telefonia mobile: i principali sono Vodacom, che ha la copertura più estesa e capillare ed è ideale per chi viaggia nei parchi, MTN, con ottima velocità e copertura urbana, poi Telkom e Cell C.\nAcquisto SIM ed eSIM: all'aeroporto internazionale di Johannesburg (OR Tambo) ci sono i chioschi ufficiali di Vodacom e MTN nell'area arrivi. Per una SIM fisica è obbligatoria la registrazione RICA, una legge locale che richiede il passaporto originale e talvolta l'indirizzo del primo hotel. In alternativa, se il telefono supporta le eSIM, conviene acquistarne una prima della partenza tramite piattaforme globali come Airalo, Holafly o Nomad, così da avere traffico dati appena atterrati evitando code in aeroporto. Verificare gli sconti disponibili nella propria area riservata Avventure.\nCopertura rete: ottima 4G/5G a Johannesburg, Pretoria, Durban e Ballito. Lungo la Panorama Route e dentro il Kruger e Hluhluwe la connessione è generalmente presente nei rest camp principali e lungo le strade asfaltate primarie, ma con frequenti zone d'ombra inoltrandosi nelle piste sterrate o nel bush profondo. Quasi tutti i lodge offrono Wi-Fi gratuito nelle aree comuni, con velocità limitata nelle riserve.\nStandard elettrico: il Sudafrica usa un sistema di prese unico. Lo standard principale è la spina di tipo M, a tre spinotti rotondi di grandi dimensioni disposti a triangolo. Più recentemente è stata introdotta la spina di tipo N, simile alla spina a due poli europea ma con un terzo spinotto di messa a terra disallineato.\n!Adattatori: gli adattatori universali venduti in Italia non includono quasi mai il tipo M sudafricano. È indispensabile acquistare un adattatore specifico per il Sudafrica prima di partire, o nei negozi dell'aeroporto e nei supermercati locali. Nei lodge di Ballito, St. Lucia o Sabie le camere hanno spesso prese combo con ingressi USB o prese europee a due poli, ma viaggiare con un adattatore dedicato e un power bank capiente è fondamentale per ricaricare durante i lunghi trasferimenti.",
+      sz: "Operatori di telefonia mobile: il mercato è dominato da MTN eSwatini. Eswatini Mobile è il secondo operatore, ma ha una copertura inferiore.\n!Roaming e SIM sudafricane: attenzione alla trappola del roaming. Le SIM e i pacchetti dati acquistati in Sudafrica smettono di funzionare appena si attraversa la frontiera di eSwatini, oppure applicano tariffe di roaming internazionale estremamente elevate. Usando una eSIM globale, verificare che il pacchetto copra esplicitamente entrambi i paesi. Per una permanenza di più giorni conviene acquistare una SIM locale MTN direttamente al posto di frontiera o a Mbabane e Manzini, esibendo il passaporto.\nCopertura rete: la copertura 3G/4G è buona lungo l'asse stradale principale (MR3) e nella Ezulwini Valley, ma diventa fortemente instabile o assente nelle aree montane più isolate o rurali dell'Alto Veld. I lodge e gli hotel offrono Wi-Fi, ma la banda è spesso satellitare o via radio, con velocità ridotte rispetto agli standard sudafricani.\nStandard elettrico: il sistema di eSwatini è interamente mutuato da quello sudafricano. Si usano prevalentemente prese di tipo M e, in minima parte, il tipo G britannico nelle vecchie strutture.\nTensione e stabilità: 230V a 50Hz, perfettamente compatibile con tutti i dispositivi europei. Si può usare lo stesso adattatore acquistato per il Sudafrica. La rete elettrica dipende in larghissima parte dalle forniture della compagnia sudafricana Eskom, quindi interruzioni e sbalzi di tensione sono frequenti: si raccomanda di scollegare i dispositivi delicati non appena completata la carica."
+    }
+  };
+
+  var PACK_TEXT = "La lista è indicativa e non esaustiva; informarsi anche in autonomia se necessario.\n!La regola d'oro, abbigliamento a cipolla: nella seconda metà di agosto, fine inverno e inizio primavera australe, l'escursione termica giornaliera è estrema nell'interno del paese. Si passa dai 4 °C dell'alba a Johannesburg o nel Kruger ai 26-28 °C di mezzogiorno. È indispensabile potersi spogliare e rivestire rapidamente durante la giornata.\nSafari mattutini e serali, Kruger e Hluhluwe: i game drive si effettuano all'alba o al tramonto, anche su veicoli 4x4 completamente aperti, e l'aria in movimento accentua il freddo in modo drastico. Il kit da tenere nel bagaglio a mano include una giacca tecnica antivento e impermeabile, un pile pesante o una felpa termica, berretto di lana, guanti e scaldacollo — fondamentali per le prime due ore di safari — e pantaloni lunghi comodi, tipo cargo o da trekking.\nDurante il giorno: entro le 11:00 il sole scalda sensibilmente savana e città. Servono t-shirt in cotone o camicie traspiranti in fibra naturale, pantaloni corti o modulari con zip, occhiali da sole — il riverbero è forte — e un cappello a tesa larga o con visiera.\n!I colori tassativi per il safari: gli indumenti esterni devono essere rigorosamente neutri e opachi — beige, khaki, marrone, ocra, verde oliva o grigio. Da evitare il bianco e i colori fluo o vivaci, che rendono visibili agli animali a chilometri di distanza; il nero e il blu scuro, che attirano la mosca tse-tse e altri insetti pungenti; il mimetico militare, vietato ai civili o fortemente scoraggiato in Sudafrica perché riservato ai ranger anti-bracconaggio e alle forze armate.\nCosta subtropicale, St. Lucia, Ballito e Durban: clima più caldo e umido. Abiti estivi leggeri per il giorno, camicie di lino o cotone e scarpe aperte. Portare un costume da bagno per le tappe sull'Oceano Indiano e una giacca leggera o K-Way per le escursioni in barca a St. Lucia — avvistamento ippopotami e balene — dove il vento oceanico può essere fresco.\nCalzature: non servono scarponi da alpinismo. Sono ideali scarpe da trekking leggero o scarpe da ginnastica robuste con buona suola scolpita per i brevi percorsi a piedi e la Panorama Route. Per il relax nei lodge o sulla costa bastano sandali o infradito.";
+
+  var PACK_ITEMS = [
+    "Zaino, valigia o borsone trolley, meglio se morbidi",
+    "Copri valigia contro pioggia e polvere",
+    "Bagaglio a mano con 1-2 cambi, in caso di smarrimento valigia",
+    "Asciugamano leggero in microfibra",
+    "Sacco lenzuolo ed eventuale federa cuscino",
+    "Torcia elettrica con batterie di scorta",
+    "Marsupio sottopancia per documenti e soldi",
+    "Adattatore tipo M sudafricano",
+    "Caricabatterie e power bank",
+    "Lucchetti per i bagagli",
+    "Occhiali da sole",
+    "Repellente antizanzare",
+    "Crema solare e burrocacao",
+    "Binocolo, utile per vedere gli animali",
+    "Giacca, K-Way o mantella",
+    "Evitare orologi, collane, orecchini e bracciali di valore"
+  ];
+
+  function renderText(raw){
+    return raw.split("\n").map(function(line){
+      line = line.trim();
+      if(!line) return "";
+      var cls = [];
+      if(line.charAt(0) === "!"){ cls.push("warnline"); line = line.slice(1).trim(); }
+      if(line.charAt(0) === "-"){ cls.push("li"); line = line.replace(/^-\s*/, ""); }
+      var out = esc(line);
+      var m = out.match(/^([^:]{2,74}):\s+([\s\S]+)$/);
+      if(m){ out = "<b>" + m[1] + ":</b> " + m[2]; }
+      return '<p class="' + cls.join(" ") + '">' + out + "</p>";
+    }).join("");
+  }
+
+  var SECTIONS = [
+    {k:"01", t:"Dati del paese", src:T.dati},
+    {k:"02", t:"Documenti, visti e frontiere", src:T.frontiera},
+    {k:"03", t:"Guida e patente", src:T.guida},
+    {k:"04", t:"Sicurezza e norme da rispettare", src:T.sicurezza},
+    {k:"05", t:"Fuso orario e clima", src:T.clima},
+    {k:"06", t:"Valuta, carte e contanti", src:T.valuta},
+    {k:"07", t:"Salute, vaccinazioni e medicinali", src:T.salute},
+    {k:"08", t:"Telefonia, internet ed elettricità", src:T.tech}
+  ];
+
+  var accHtml = SECTIONS.map(function(s, i){
+    return '<details class="acc"' + (i === 0 ? " open" : "") + '>'
+      + '<summary><span class="acc-i">' + s.k + '</span>' + s.t + '</summary>'
+      + '<div class="acc-body"><div class="country-cols">'
+      + '<div class="cbox" data-c="za"><h4>Sudafrica</h4>' + renderText(s.src.za) + '</div>'
+      + '<div class="cbox" data-c="sz"><h4>eSwatini</h4>' + renderText(s.src.sz) + '</div>'
+      + '</div></div></details>';
+  }).join("");
+
+  accHtml += '<details class="acc">'
+    + '<summary><span class="acc-i">09</span>Cosa portare in valigia</summary>'
+    + '<div class="acc-body"><div class="country-cols solo">'
+    + '<div class="cbox"><h4>Vale per entrambi i paesi</h4>' + renderText(PACK_TEXT)
+    + '<ul class="packlist">' + PACK_ITEMS.map(function(x){ return "<li>" + esc(x) + "</li>"; }).join("") + '</ul>'
+    + '<p style="margin-top:14px;color:var(--muted);font-size:.84rem">Si fa affidamento all\'esperienza del viaggiatore per la composizione e la dimensione del bagaglio: nel dubbio, contattare il coordinatore.</p>'
+    + '</div></div></div></details>';
+
+  document.getElementById("infoacc").innerHTML = accHtml;
+
+  Array.prototype.forEach.call(document.querySelectorAll(".toggle-row .fbtn"), function(b){
+    b.addEventListener("click", function(){
+      var mode = b.getAttribute("data-c");
+      Array.prototype.forEach.call(document.querySelectorAll(".toggle-row .fbtn"), function(o){
+        o.setAttribute("aria-pressed", o === b ? "true" : "false");
+      });
+      Array.prototype.forEach.call(document.querySelectorAll("#infoacc .country-cols"), function(g){
+        if(g.querySelectorAll("[data-c]").length < 2) return;
+        var za = g.querySelector('[data-c="za"]'), sz = g.querySelector('[data-c="sz"]');
+        za.classList.toggle("hidden", mode === "sz");
+        sz.classList.toggle("hidden", mode === "za");
+        g.classList.toggle("solo", mode !== "both");
+      });
+    });
+  });
+
+  /* ============ VADEMECUM AUTO ============ */
+  var AUTO = [
+    ["Quali sono i requisiti per richiedere un viaggio con auto a nolo?",
+     "Il coordinatore sarà l'intestatario del contratto di una delle auto a disposizione del gruppo e dovrà avere patente in corso di validità e carta di credito valida con PIN — no prepagate, no carte di debito. Inoltre dovrà essere disponibile a guidare.\nSe il viaggio richiede più di un'auto, servirà che altri membri del gruppo siano disponibili a guidare e in possesso di patente e carta di credito per l'intestazione di ciascuna auto.\n!Non è possibile intestare più auto alla stessa persona."],
+
+    ["Posso scegliere il tipo di auto o contattare la compagnia prima della partenza?",
+     "No in entrambi i casi. Il tipo di vettura e la compagnia sono scelti dall'agenzia e verranno comunicati nel foglio notizie o nelle istruzioni operative presenti nella tua area riservata, costantemente in aggiornamento."],
+
+    ["Quali documenti servono per ritirare l'auto?",
+     "Patente, carta di credito e voucher di prenotazione. Il voucher viene inviato via email al coordinatore qualche giorno prima della partenza.\n!Il voucher non è il contratto di noleggio: il contratto si firma al momento del ritiro."],
+
+    ["Verrà bloccato un deposito cauzionale?",
+     "Sì. Al momento del ritiro viene bloccato un importo sulla carta di credito a garanzia. L'importo varia in base al paese, al tipo di vettura e alla compagnia: non è possibile comunicarlo in anticipo con precisione."],
+
+    ["Quali assicurazioni sono incluse nel noleggio?",
+     "Ci si impegna a garantire come minimo:\n- RCA: responsabilità civile verso terzi. Copre i danni causati a terzi in caso di incidente — persone, veicoli o cose — ma non i danni al proprio veicolo o al conducente responsabile.\n- SCDW: Super Collision Damage Waiver, abbattimento di norma a zero della franchigia danni da collisione.\n- STP: Super Theft Protection, abbattimento di norma a zero della franchigia furto.\n- LDW: Loss Damage Waiver, equivalente di SCDW + STP, usato negli USA.\n- AD: Additional Driver, un autista aggiuntivo per auto oltre al principale.\nPer alcune compagnie o in alcuni paesi certe coperture non possono essere prepagate e vanno acquistate direttamente al banco con la cassa viaggi."],
+
+    ["Le coperture assicurative hanno limitazioni?",
+     "!Sì. Le assicurazioni non sono operative in caso di incidente con queste caratteristiche:\n- assenza di verbale di polizia\n- conducente in stato di ebbrezza o sotto effetto di stupefacenti\n- trasporto di animali\n- numero di passeggeri superiore a quello consentito\n- circolazione su strade non autorizzate\nConsultare il contratto per l'elenco completo."],
+
+    ["Cosa controllo al ritiro dell'auto?",
+     "Prima di firmare il contratto verifica sempre:\n- danni a carrozzeria e interni: segnalali alla compagnia, indicali sul contratto e fotografali\n- funzionamento di fari, frecce e tergicristalli\n- funzionamento dei freni\n- livello del carburante, va riconsegnata con la stessa quantità\n- dotazione e stato della ruota di scorta e del kit attrezzi, se previsti\n- trazione 4x4, dove richiesta dall'itinerario\n- pneumatici: esigi la sostituzione in caso di usura"],
+
+    ["Cosa faccio in caso di problema tecnico?",
+     "Contatta direttamente la compagnia di noleggio. Al momento del ritiro assicurati di annotare i numeri di emergenza."],
+
+    ["Cosa faccio in caso di incidente?",
+     "Contatta la compagnia di noleggio.\n!Chiama la polizia locale e ottieni un verbale: è indispensabile per attivare la copertura assicurativa.\nSe ci sono feriti tra i partecipanti, contatta il numero dedicato alle emergenze mediche: +39 342 971 0243."]
+  ];
+
+  var MANLEVA_INTRO = "La manleva è una lettera che il coordinatore, per consuetudine, chiede a tutti i partecipanti di firmare. Con essa ci si impegna a essere solidali e corresponsabili per eventuali costi aggiuntivi addebitati dalla compagnia — danni, furto, multe — indipendentemente da chi guidava o su quale mezzo ci si trovava.\nNon produce effetti verso la compagnia di noleggio o verso terzi danneggiati, ma regola i rapporti interni fra i partecipanti del gruppo, impegnandoli alla condivisione delle spese.\n!Il documento, firmato da tutti, va condiviso nel gruppo WhatsApp così che tutti i partecipanti lo possano consultare.";
+
+  var MANLEVA_TESTO = "DICHIARAZIONE LIBERATORIA (NOLEGGIO AUTO)\nI SOTTOSCRITTI PARTECIPANTI al viaggio auto-gestito SUDAFRICA KRUGER DISCOVERY, codice viaggio 1818, con partenza dall'Italia il giorno 15/08/2026 ed organizzato da \"Viaggi nel Mondo s.r.l.\", con sede in Roma - largo Grigioni 7, premesso che il viaggio di cui trattasi prevede il noleggio di mezzi guidati a turno dai partecipanti, e che la scelta degli autisti viene effettuata su base volontaria e con accettazione unanime,\nDICHIARANO di essere a conoscenza:\n- di quanto previsto dalle \"condizioni di partecipazione ai viaggi\" (facenti parte del contratto di viaggio) sottoscritte al momento dell'iscrizione al viaggio;\n- che l'assicurazione che verrà stipulata per il noleggio dei mezzi di trasporto prevede una franchigia non eliminabile;\n- che la compagnia di autonoleggio richiede una garanzia al momento del ritiro delle autovetture con carta di credito di un partecipante a copertura degli obblighi derivanti dal contratto di noleggio;\n- che le assicurazioni stipulate non saranno efficaci nel caso in cui al momento di un eventuale incidente si trovi alla guida un partecipante il cui nome non figuri nel contratto di noleggio. In tal caso la presente liberatoria deve ritenersi non applicabile e il conducente sarà direttamente responsabile per tutti gli eventuali danni.\nACCETTANO il pagamento di quanto addebitato dalla compagnia noleggiatrice in caso di danni al mezzo, incidente, km aggiuntivi, eccetera.\nSI IMPEGNANO:\n- ad essere pienamente solidali e corresponsabili con tutti i compagni di viaggio in caso di costi aggiuntivi di cui sopra addebitati dalla compagnia noleggiatrice, nonché per sanzioni derivanti da infrazioni al codice della strada, indipendentemente dalla circostanza che al momento del danno o infrazione si trovino o meno sul mezzo danneggiato o multato, o su un altro;\n- nei confronti dei compagni di viaggio che hanno garantito con la propria carta di credito, a rimborsare loro la propria quota delle spese che la compagnia noleggiatrice dovesse addebitare, comprese quelle relative a servizi accessori e optional sottoscritti al momento del ritiro dei mezzi, quali, a titolo esemplificativo, assicurazioni integrative, accessori, upgrade di categoria, opzioni di rifornimento non previste dal pacchetto fornito dall'agenzia;\n- a saldare in corso di viaggio, nel momento stesso in cui viene effettuato il pagamento della spesa, la propria quota di pertinenza, stabilita di comune accordo su base di uguale suddivisione dell'importo totale fra tutti i partecipanti.\nMANLEVANO, indipendentemente dall'esistenza o meno di coperture assicurative per i terzi trasportati e dal tipo e dall'entità di tali coperture, i partecipanti alla guida dei mezzi dalla responsabilità civile per danni eventualmente ricevuti e derivanti da incidente stradale, anche qualora ciò possa essere imputabile a presunta imperizia.\nNota: le eventuali spese di cui trattasi verranno suddivise in parti uguali tra i soli partecipanti occupanti un mezzo incidentato, o multato, o comunque oggetto di costi aggiuntivi, nel caso in cui con tale mezzo gli occupanti si siano volontariamente separati dal resto del gruppo per svolgere una attività non al servizio del gruppo stesso.\nLetto, confermato per presa visione.";
+
+  (function(){
+    var h = AUTO.map(function(qa, i){
+      var num = (i + 1) < 10 ? "0" + (i + 1) : String(i + 1);
+      return '<details class="acc">'
+        + '<summary><span class="acc-i">' + num + '</span>' + esc(qa[0]) + '</summary>'
+        + '<div class="acc-body"><div class="country-cols solo"><div class="cbox">'
+        + renderText(qa[1]) + '</div></div></div></details>';
+    }).join("");
+
+    h += '<details class="acc">'
+      + '<summary><span class="acc-i">10</span>La manleva: cos\'è e quando farla firmare</summary>'
+      + '<div class="acc-body"><div class="country-cols solo"><div class="cbox">'
+      + renderText(MANLEVA_INTRO)
+      + '<h4 style="margin-top:18px">Testo della manleva</h4>'
+      + renderText(MANLEVA_TESTO)
+      + '</div></div></div></details>';
+
+    document.getElementById("autoacc").innerHTML = h;
+  })();
+
+  /* ============ scrollspy ============ */
+  var links = Array.prototype.slice.call(document.querySelectorAll("#segnav a"));
+  var targets = links.map(function(a){ return document.querySelector(a.getAttribute("href")); });
+  function spy(){
+    var y = window.scrollY + 90, idx = 0;
+    targets.forEach(function(t, i){ if(t && t.offsetTop <= y) idx = i; });
+    links.forEach(function(a, i){ a.setAttribute("aria-current", i === idx ? "true" : "false"); });
+  }
+  var ticking = false;
+  window.addEventListener("scroll", function(){
+    if(ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(function(){ spy(); ticking = false; });
+  }, {passive:true});
+  window.addEventListener("resize", spy, {passive:true});
+  spy();
+})();
+</script>
