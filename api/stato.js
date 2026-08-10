@@ -37,6 +37,23 @@ async function gist(metodo, corpo) {
   return r.json();
 }
 
+// Il corpo della richiesta va letto senza dare per scontato che il runtime
+// lo abbia già decodificato: a seconda della configurazione req.body può
+// essere un oggetto, una stringa, un Buffer oppure mancare del tutto.
+function leggiCorpo(req) {
+  return new Promise((risolvi, rifiuta) => {
+    const b = req.body;
+    if (Buffer.isBuffer(b)) return risolvi({ testo: b.toString("utf8"), via: "buffer" });
+    if (typeof b === "string") return risolvi({ testo: b, via: "stringa" });
+    if (b && typeof b === "object") return risolvi({ oggetto: b, via: "oggetto" });
+    let dati = "";
+    req.setEncoding("utf8");
+    req.on("data", (c) => { dati += c; });
+    req.on("end", () => risolvi({ testo: dati, via: "flusso" }));
+    req.on("error", rifiuta);
+  });
+}
+
 module.exports = async (req, res) => {
   if (!process.env.GIST_ID || !process.env.GITHUB_TOKEN || !process.env.SYNC_TOKEN) {
     return json(res, 500, { errore: "configurazione incompleta sul server" });
@@ -60,10 +77,23 @@ module.exports = async (req, res) => {
       if (req.headers["x-sync-token"] !== process.env.SYNC_TOKEN) {
         return json(res, 403, { errore: "token non valido" });
       }
-      // req.body arriva già decodificato quando il content-type è json
-      const corpo = typeof req.body === "string" ? JSON.parse(req.body) : req.body;
+      const letto = await leggiCorpo(req);
+      let corpo = letto.oggetto;
+      if (!corpo) {
+        try {
+          corpo = JSON.parse(letto.testo || "");
+        } catch (e) {
+          return json(res, 400, {
+            errore: `corpo illeggibile (via ${letto.via}, ${(letto.testo || "").length} byte)`,
+          });
+        }
+      }
       if (!corpo || typeof corpo.cifrato !== "string") {
-        return json(res, 400, { errore: "corpo non valido" });
+        return json(res, 400, {
+          errore: `manca il campo cifrato (via ${letto.via}, chiavi: ${
+            corpo ? Object.keys(corpo).join("|") || "nessuna" : "nullo"
+          })`,
+        });
       }
       const doc = { cifrato: corpo.cifrato, ts: Number(corpo.ts) || Date.now() };
       await gist("PATCH", {
